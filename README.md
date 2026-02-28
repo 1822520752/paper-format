@@ -17,7 +17,7 @@
 
 <img src="https://via.placeholder.com/900x500?text=🎨+论文格+界面预览图" width="88%" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(74,144,217,0.2); margin: 20px 0;">
 
-**[🚀 在线体验](#) · [📖 使用文档](#使用指南) · [🐛 反馈问题](https://github.com/1822520752/paper-format/issues) · [💡 功能建议](https://github.com/1822520752/paper-format/issues)**
+**[🚀 在线体验](https://paperformat-zx1822520752.app.haisnap.com/) · [📖 使用文档](#使用指南) · [🐛 反馈问题](https://github.com/1822520752/paper-format/issues) · [💡 功能建议](https://github.com/1822520752/paper-format/issues)**
 
 </div>
 
