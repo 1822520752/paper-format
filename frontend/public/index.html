@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论文格 - 毕业论文格式一键排版工具 By 试界 TryWorld</title>
+    <meta name="description" content="大学毕业论文格式自动检查与一键排版工具，支持Word文档格式规范化">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            important: true,
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Noto Sans SC', 'Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'fadeIn': 'fadeIn 0.5s ease-out',
+                        'bounceIn': 'bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                        'slideInDown': 'slideInDown 0.4s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.95)', opacity: '0' },
+                            '50%': { transform: 'scale(1.02)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        slideInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen">
+    <div class="bg-decoration"></div>
+    
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card" style="border-radius: 0; backdrop-filter: blur(16px); background: rgba(255, 255, 255, 0.7);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold gradient-text">论文格</h1>
+                    <span class="text-xs text-gray-400 ml-2">By 试界</span>
+                </div>
+                <div class="badge">免费使用</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+        <section class="text-center mb-16 animate-fadeIn">
+            <h2 class="text-5xl sm:text-6xl font-bold text-gray-800 mb-3">
+                毕业论文格式
+            </h2>
+            <h2 class="text-5xl sm:text-6xl font-bold gradient-text mb-6" style="text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);">
+                一键搞定
+            </h2>
+            <p class="text-gray-600 text-lg mb-8">上传Word → 智能检查 → 自动排版 → 下载成品</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto">
+                <div class="glass-card px-8 py-4">
+                    <div class="text-3xl font-bold gradient-text mb-1">15+</div>
+                    <div class="text-sm text-gray-600">项格式检查</div>
+                </div>
+                <div class="glass-card px-8 py-4">
+                    <div class="text-3xl font-bold gradient-text mb-1">1键</div>
+                    <div class="text-sm text-gray-600">自动排版</div>
+                </div>
+                <div class="glass-card px-8 py-4">
+                    <div class="text-3xl font-bold gradient-text mb-1">100%</div>
+                    <div class="text-sm text-gray-600">免费使用</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid lg:grid-cols-2 gap-8 mb-16">
+            <div class="glass-card p-8 animate-fadeIn">
+                <h3 class="text-xl font-bold text-gray-800 mb-6">上传与设置</h3>
+                
+                <div id="uploadZone" class="upload-zone mb-6">
+                    <div class="text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                        </svg>
+                        <p class="text-lg font-medium text-gray-700 mb-2">拖拽文件到这里，或点击上传</p>
+                        <p class="text-sm text-gray-500">支持 .docx 格式，最大 20MB</p>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" accept=".docx" class="hidden">
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">选择模板</label>
+                    <select id="templateSelect" class="select-glass">
+                        <option value="国标通用">国标通用格式</option>
+                    </select>
+                </div>
+                
+                <div class="mb-6">
+                    <button id="advancedToggle" class="w-full flex items-center justify-between p-4 bg-white bg-opacity-50 rounded-xl hover:bg-opacity-70 transition-all">
+                        <span class="font-medium text-gray-700">高级设置</span>
+                        <svg id="advancedIcon" class="w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="advancedPanel" class="max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="grid grid-cols-2 gap-4 mt-4 p-4 bg-white bg-opacity-30 rounded-xl">
+                            <div>
+                                <label class="block text-xs font-medium text-gray-600 mb-1">上页边距(cm)</label>
+                                <input type="number" id="topMargin" placeholder="2.5" step="0.1" class="input-glass">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-600 mb-1">下页边距(cm)</label>
+                                <input type="number" id="bottomMargin" placeholder="2.5" step="0.1" class="input-glass">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-600 mb-1">左页边距(cm)</label>
+                                <input type="number" id="leftMargin" placeholder="3.0" step="0.1" class="input-glass">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-600 mb-1">右页边距(cm)</label>
+                                <input type="number" id="rightMargin" placeholder="2.5" step="0.1" class="input-glass">
+                            </div>
+                        </div>
+                        <div class="flex gap-3 mt-4">
+                            <button id="exportConfigBtn" class="flex-1 btn-outline text-sm">导出配置</button>
+                            <button id="importConfigBtn" class="flex-1 btn-outline text-sm">导入配置</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <button id="checkBtn" class="flex-1 btn-outline" disabled>
+                        检查格式
+                    </button>
+                    <button id="formatBtn" class="flex-1 btn-gradient" disabled>
+                        一键排版
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 animate-fadeIn" style="animation-delay: 0.1s;">
+                <h3 class="text-xl font-bold text-gray-800 mb-6">检查结果</h3>
+                <div id="resultArea" class="min-h-[400px]">
+                    <div class="text-center py-12">
+                        <div class="mb-8">
+                            <div class="inline-block p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl mb-4">
+                                <svg class="w-16 h-16 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">开始使用论文格</h3>
+                            <p class="text-gray-600">三步完成论文格式规范化</p>
+                        </div>
+                        
+                        <div class="max-w-2xl mx-auto space-y-6 text-left">
+                            <div class="flex gap-4 items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white flex items-center justify-center font-bold shadow-lg">1</div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-800 mb-1">上传论文文档</h4>
+                                    <p class="text-sm text-gray-600">支持 .docx 格式，最大 20MB</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4 items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white flex items-center justify-center font-bold shadow-lg">2</div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-800 mb-1">检查格式问题</h4>
+                                    <p class="text-sm text-gray-600">系统自动检查 15+ 项格式规范</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4 items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white flex items-center justify-center font-bold shadow-lg">3</div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-800 mb-1">一键自动排版</h4>
+                                    <p class="text-sm text-gray-600">下载符合规范的排版后文档</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 animate-fadeIn" style="animation-delay: 0.2s;">
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-8">使用步骤</h3>
+            <div class="max-w-4xl mx-auto timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">1</div>
+                    <div class="glass-card p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">上传论文文档</h4>
+                        <p class="text-sm text-gray-600">点击上传区域或拖拽 .docx 格式的论文文档，系统会自动保存并准备检查</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">2</div>
+                    <div class="glass-card p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">查看检查报告</h4>
+                        <p class="text-sm text-gray-600">点击"检查格式"按钮，系统会逐项检查页边距、字体、行距等15+项格式要求，生成详细报告</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="glass-card p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">一键自动排版</h4>
+                        <p class="text-sm text-gray-600">点击"一键排版"按钮，系统会自动修正所有格式问题，生成符合规范的新文档供下载</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 animate-fadeIn" style="animation-delay: 0.3s;">
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-8">常见问题</h3>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="glass-card overflow-hidden faq-item">
+                    <button class="faq-question w-full p-5 flex items-center justify-between hover:bg-purple-50 hover:bg-opacity-30 transition-colors">
+                        <span class="font-medium text-gray-800">支持哪些Word版本？</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden p-5 pt-0">
+                        <p class="text-sm text-gray-600">支持 .docx 格式的文档，即 Microsoft Word 2007 及以上版本创建的文档。不支持 .doc 格式（Word 2003及更早版本）。</p>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden faq-item">
+                    <button class="faq-question w-full p-5 flex items-center justify-between hover:bg-purple-50 hover:bg-opacity-30 transition-colors">
+                        <span class="font-medium text-gray-800">会修改我的论文内容吗？</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden p-5 pt-0">
+                        <p class="text-sm text-gray-600">不会！系统只修改格式（字体、行距、页边距等），不会改动任何文字内容、图表或引用。您的论文内容绝对安全。</p>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden faq-item">
+                    <button class="faq-question w-full p-5 flex items-center justify-between hover:bg-purple-50 hover:bg-opacity-30 transition-colors">
+                        <span class="font-medium text-gray-800">支持哪些学校的格式要求？</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden p-5 pt-0">
+                        <p class="text-sm text-gray-600">目前提供国标通用论文格式模板，适用于大多数高校。如需适配特定学校，可通过"高级设置"自定义格式参数，或导入学校提供的配置文件。</p>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden faq-item">
+                    <button class="faq-question w-full p-5 flex items-center justify-between hover:bg-purple-50 hover:bg-opacity-30 transition-colors">
+                        <span class="font-medium text-gray-800">文件安全吗？会被保存吗？</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden p-5 pt-0">
+                        <p class="text-sm text-gray-600">您的文件绝对安全。文件处理完成后会立即从服务器删除，不会保存或备份。整个处理过程仅在临时目录中进行，最长保留1小时后自动清理。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>&copy; 2026 <strong>试界 TryWorld</strong> - 论文格 - 让论文格式规范变简单</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
