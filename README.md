@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/论文格-毕业论文排版工具-4A90D9?style=for-the-badge&logo=googledocs&logoColor=white" alt="论文格">
+<img src="https://img.shields.io/badge/PaperFormat-Thesis_Formatting_Tool-4A90D9?style=for-the-badge&logo=googledocs&logoColor=white" alt="PaperFormat">
 
-# 📝 论文格
+# 📝 PaperFormat
 
-### **毕业论文格式一键排版工具**
+### **One-Click Thesis Formatting Tool**
 
-*让论文格式规范变简单 · 让毕业更轻松*
+*Making thesis formatting simple · Making graduation easier*
 
 [![Python Version](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![Flask](https://img.shields.io/badge/Flask-2.0+-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
@@ -15,102 +15,102 @@
 [![GitHub Issues](https://img.shields.io/github/issues/1822520752/paper-format?style=flat-square&logo=github)](https://github.com/1822520752/paper-format/issues)
 [![GitHub Forks](https://img.shields.io/github/forks/1822520752/paper-format?style=flat-square&logo=github)](https://github.com/1822520752/paper-format/network/members)
 
-<img src="https://via.placeholder.com/900x500?text=🎨+论文格+界面预览图" width="88%" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(74,144,217,0.2); margin: 20px 0;">
+<img src="https://via.placeholder.com/900x500?text=🎨+PaperFormat+Preview" width="88%" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(74,144,217,0.2); margin: 20px 0;">
 
-**[🚀 在线体验](https://paperformat-zx1822520752.app.haisnap.com/) · [📖 使用文档](#使用指南) · [🐛 反馈问题](https://github.com/1822520752/paper-format/issues) · [💡 功能建议](https://github.com/1822520752/paper-format/issues)**
+**[🚀 Live Demo](https://paperformat-zx1822520752.app.haisnap.com/) · [📖 Documentation](#user-guide) · [🐛 Report Bug](https://github.com/1822520752/paper-format/issues) · [💡 Request Feature](https://github.com/1822520752/paper-format/issues)**
 
 </div>
 
 ---
 
-## 📑 目录
+## 📑 Table of Contents
 
-- [📖 项目背景](#-项目背景)
-- [✨ 核心功能](#-核心功能)
-- [🎮 功能演示](#-功能演示)
-- [🚀 快速开始](#-快速开始)
-- [📋 使用指南](#-使用指南)
-- [⚙️ 配置详解](#️-配置详解)
-- [📁 项目结构](#-项目结构)
-- [🔌 API 文档](#-api-文档)
-- [🏗️ 技术架构](#️-技术架构)
-- [🤝 参与贡献](#-参与贡献)
-- [❓ 常见问题](#-常见问题)
-- [📜 更新日志](#-更新日志)
-- [📄 开源协议](#-开源协议)
-- [👤 关于作者](#-关于作者)
-
----
-
-## 📖 项目背景
-
-### 为什么开发这个工具？
-
-每到毕业季，无数高校毕业生都要面对繁琐的论文格式调整工作：
-
-> 😫 "页边距要调，字体要改，行距要设置……"
-> 
-> 😫 "参考文献格式又不对，图表标题位置不对……"
-> 
-> 😫 "改了半天还是不符合学校要求……"
-
-**论文格** 就是为了解决这些痛点而生！
-
-### 我们的目标
-
-- ✅ **解放双手** - 告别繁琐的手动格式调整
-- ✅ **提高效率** - 一键完成格式检查与排版
-- ✅ **规范统一** - 严格遵循国标 GB/T 7713.1-2006
-- ✅ **简单易用** - 无需安装，网页端即可使用
+- [📖 Background](#-background)
+- [✨ Core Features](#-core-features)
+- [🎮 Demo](#-demo)
+- [🚀 Quick Start](#-quick-start)
+- [📋 User Guide](#-user-guide)
+- [⚙️ Configuration](#️-configuration)
+- [📁 Project Structure](#-project-structure)
+- [🔌 API Documentation](#-api-documentation)
+- [🏗️ Technical Architecture](#️-technical-architecture)
+- [🤝 Contributing](#-contributing)
+- [❓ FAQ](#-faq)
+- [📜 Changelog](#-changelog)
+- [📄 License](#-license)
+- [👤 Author](#-author)
 
 ---
 
-## ✨ 核心功能
+## 📖 Background
 
-### 🔍 智能格式检查
+### Why This Tool?
 
-| 检查项目 | 检查内容 | 检测精度 |
+Every graduation season, countless university graduates face the tedious task of thesis formatting:
+
+> 😫 "Need to adjust margins, change fonts, set line spacing..."
+> 
+> 😫 "Reference format is wrong again, figure captions are misplaced..."
+> 
+> 😫 "After hours of editing, it still doesn't meet school requirements..."
+
+**PaperFormat** was created to solve these pain points!
+
+### Our Goals
+
+- ✅ **Free Your Hands** - Say goodbye to tedious manual formatting
+- ✅ **Improve Efficiency** - Complete format checking and formatting with one click
+- ✅ **Standardization** - Strictly follow the national standard GB/T 7713.1-2006
+- ✅ **Easy to Use** - No installation required, use directly in your browser
+
+---
+
+## ✨ Core Features
+
+### 🔍 Smart Format Checking
+
+| Check Item | Content | Precision |
 |:---:|:---|:---:|
-| 📄 **页面设置** | 上/下/左/右页边距、纸张大小 | 0.1cm |
-| 🔤 **标题格式** | 一级/二级/三级标题字体、字号、加粗、对齐 | 精确 |
-| 📝 **正文格式** | 正文字体、字号、行距、首行缩进 | 精确 |
-| 📋 **摘要格式** | 中英文摘要标题、正文格式 | 精确 |
-| 🖼️ **图表标题** | 图题、表题字体、字号、位置 | 精确 |
-| 📚 **参考文献** | 参考文献标题、正文格式 | 精确 |
-| 📑 **页眉页脚** | 页眉内容、页码格式 | 精确 |
+| 📄 **Page Settings** | Top/bottom/left/right margins, paper size | 0.1cm |
+| 🔤 **Heading Format** | Level 1/2/3 heading font, size, bold, alignment | Exact |
+| 📝 **Body Format** | Body font, size, line spacing, first line indent | Exact |
+| 📋 **Abstract Format** | Chinese/English abstract title and body format | Exact |
+| 🖼️ **Figure/Table Captions** | Caption font, size, position | Exact |
+| 📚 **References** | Reference title and body format | Exact |
+| 📑 **Header/Footer** | Header content, page number format | Exact |
 
-### 🎨 一键智能排版
+### 🎨 One-Click Smart Formatting
 
-| 功能 | 描述 |
+| Feature | Description |
 |:---:|:---|
-| 🎯 **自动识别** | 智能识别标题、正文、摘要等不同内容 |
-| ⚡ **批量处理** | 一次性完成所有格式调整 |
-| 🔧 **自定义配置** | 支持自定义格式参数 |
-| 📥 **保留内容** | 排版过程不改变原文内容 |
-| 💾 **即时下载** | 排版完成即可下载 |
+| 🎯 **Auto Recognition** | Intelligently identify headings, body, abstract and other content |
+| ⚡ **Batch Processing** | Complete all format adjustments at once |
+| 🔧 **Custom Configuration** | Support custom format parameters |
+| 📥 **Content Preservation** | Formatting process does not change original content |
+| 💾 **Instant Download** | Download immediately after formatting |
 
-### 📋 预设模板
+### 📋 Preset Templates
 
-| 模板名称 | 适用场景 | 页边距 | 行距 | 正文字体 | 特点 |
+| Template Name | Applicable Scenarios | Margins | Line Spacing | Body Font | Features |
 |:---:|:---|:---:|:---:|:---:|:---|
-| 🎓 **国标通用** | 大多数高校 | 2.5/2.5/3.0/2.5 | 1.5倍 | 宋体 | 标准国标格式 |
-| 🔬 **理工科论文** | 理工科专业 | 2.5/2.5/2.5/2.5 | 1.25倍 | 宋体 | 紧凑排版，适合公式图表 |
-| 📚 **文科论文** | 文科类专业 | 2.5/2.5/3.0/2.5 | 2.0倍 | 仿宋 | 宽松排版，适合文字论述 |
+| 🎓 **National Standard** | Most universities | 2.5/2.5/3.0/2.5 | 1.5x | SimSun | Standard format |
+| 🔬 **STEM Thesis** | Science & Engineering | 2.5/2.5/2.5/2.5 | 1.25x | SimSun | Compact layout, suitable for formulas and charts |
+| 📚 **Humanities Thesis** | Liberal Arts | 2.5/2.5/3.0/2.5 | 2.0x | FangSong | Loose layout, suitable for text |
 
 ---
 
-## 🎮 功能演示
+## 🎮 Demo
 
-### 使用流程
+### Workflow
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   📤 上传   │ ─► │   🔍 检查   │ ─► │   ✨ 排版   │ ─► │   📥 下载   │
-│   Word文档  │    │   格式问题  │    │   一键修正  │    │   规范文档  │
+│   📤 Upload │ ─► │   🔍 Check  │ ─► │   ✨ Format │ ─► │   📥 Download│
+│   Word Doc  │    │   Issues    │    │   One-Click │    │   Result    │
 └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
 ```
 
-### 检查报告示例
+### Sample Check Report
 
 ```json
 {
@@ -120,119 +120,119 @@
   "pass_rate": 72.0,
   "items": [
     {
-      "category": "页面设置",
-      "name": "上页边距",
+      "category": "Page Settings",
+      "name": "Top Margin",
       "passed": false,
       "current": "2.0cm",
       "expected": "2.5cm",
-      "suggestion": "将上页边距调整为2.5cm"
+      "suggestion": "Adjust top margin to 2.5cm"
     }
-    // ... 更多检查项
+    // ... more check items
   ]
 }
 ```
 
 ---
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 环境要求
+### Requirements
 
-| 环境 | 版本要求 | 说明 |
+| Environment | Version | Notes |
 |:---:|:---:|:---|
-| Python | 3.8+ | 推荐 3.10 或 3.11 |
-| pip | 最新版 | Python 包管理器 |
-| 操作系统 | Windows/macOS/Linux | 跨平台支持 |
+| Python | 3.8+ | 3.10 or 3.11 recommended |
+| pip | Latest | Python package manager |
+| OS | Windows/macOS/Linux | Cross-platform support |
 
-### 安装步骤
+### Installation
 
-#### 方式一：从 GitHub 克隆（推荐）
+#### Option 1: Clone from GitHub (Recommended)
 
 ```bash
-# 1. 克隆项目
+# 1. Clone the project
 git clone https://github.com/1822520752/paper-format.git
 
-# 2. 进入项目目录
+# 2. Navigate to project directory
 cd paper-format/backend
 
-# 3. 创建虚拟环境（可选但推荐）
+# 3. Create virtual environment (optional but recommended)
 python -m venv venv
 
-# 4. 激活虚拟环境
+# 4. Activate virtual environment
 # Windows:
 venv\Scripts\activate
 # macOS/Linux:
 source venv/bin/activate
 
-# 5. 安装依赖
+# 5. Install dependencies
 pip install -r requirements.txt
 
-# 6. 启动服务
+# 6. Start the server
 python app.py
 ```
 
-#### 方式二：下载 ZIP
+#### Option 2: Download ZIP
 
 ```bash
-# 1. 下载并解压项目
-# 2. 进入 backend 目录
+# 1. Download and extract the project
+# 2. Navigate to backend directory
 # 3. pip install -r requirements.txt
 # 4. python app.py
 ```
 
-### 启动服务
+### Start the Server
 
 ```bash
 python app.py
 ```
 
-看到以下输出表示启动成功：
+You should see the following output indicating successful startup:
 
 ```
-INFO:__main__:启动服务器在端口 3000
+INFO:__main__:Starting server on port 3000
  * Serving Flask app 'app'
  * Running on http://0.0.0.0:3000/ (Press CTRL+C to quit)
 ```
 
-### 访问应用
+### Access the Application
 
-打开浏览器访问：**http://localhost:3000**
-
----
-
-## 📋 使用指南
-
-### 步骤一：上传文档
-
-1. 点击「选择文件」按钮
-2. 选择需要处理的 Word 文档（.docx 格式）
-3. 点击「上传」按钮
-4. 等待上传完成
-
-> ⚠️ **注意**：仅支持 .docx 格式，不支持 .doc 格式
-
-### 步骤二：检查格式
-
-1. 文档上传成功后，点击「格式检查」按钮
-2. 系统将自动检测文档格式
-3. 查看检查报告，了解格式问题
-
-### 步骤三：一键排版
-
-1. 确认格式配置（可使用默认或自定义）
-2. 点击「一键排版」按钮
-3. 等待排版完成
-
-### 步骤四：下载文档
-
-1. 排版完成后点击「下载」按钮
-2. 获取格式规范的文档
+Open your browser and visit: **http://localhost:3000**
 
 ---
 
-## ⚙️ 配置详解
+## 📋 User Guide
 
-### 完整配置项
+### Step 1: Upload Document
+
+1. Click the "Choose File" button
+2. Select the Word document to process (.docx format)
+3. Click the "Upload" button
+4. Wait for upload to complete
+
+> ⚠️ **Note**: Only .docx format is supported, .doc format is not supported
+
+### Step 2: Check Format
+
+1. After successful upload, click the "Format Check" button
+2. The system will automatically detect document format
+3. Review the check report to understand format issues
+
+### Step 3: One-Click Formatting
+
+1. Confirm format configuration (use default or customize)
+2. Click the "One-Click Format" button
+3. Wait for formatting to complete
+
+### Step 4: Download Document
+
+1. After formatting, click the "Download" button
+2. Get the formatted document
+
+---
+
+## ⚙️ Configuration
+
+### Complete Configuration Options
 
 ```json
 {
@@ -244,13 +244,13 @@ INFO:__main__:启动服务器在端口 3000
     "paper_size": "A4"
   },
   "fonts": {
-    "chinese_font": "宋体",
+    "chinese_font": "SimSun",
     "english_font": "Times New Roman",
-    "title_chinese_font": "黑体",
+    "title_chinese_font": "SimHei",
     "title_english_font": "Times New Roman"
   },
   "heading1": {
-    "font_name": "黑体",
+    "font_name": "SimHei",
     "font_size": 16,
     "bold": true,
     "alignment": "center",
@@ -258,7 +258,7 @@ INFO:__main__:启动服务器在端口 3000
     "space_after": 1
   },
   "heading2": {
-    "font_name": "黑体",
+    "font_name": "SimHei",
     "font_size": 14,
     "bold": true,
     "alignment": "left",
@@ -266,7 +266,7 @@ INFO:__main__:启动服务器在端口 3000
     "space_after": 0
   },
   "heading3": {
-    "font_name": "黑体",
+    "font_name": "SimHei",
     "font_size": 12,
     "bold": true,
     "alignment": "left",
@@ -274,19 +274,19 @@ INFO:__main__:启动服务器在端口 3000
     "space_after": 0
   },
   "body": {
-    "font_name": "宋体",
+    "font_name": "SimSun",
     "font_size": 12,
     "line_spacing": 1.5,
     "line_spacing_type": "multiple",
     "first_line_indent": 2
   },
   "figure_caption": {
-    "font_name": "宋体",
+    "font_name": "SimSun",
     "font_size": 10.5,
     "alignment": "center"
   },
   "header": {
-    "font_name": "宋体",
+    "font_name": "SimSun",
     "font_size": 9,
     "alignment": "center",
     "content": ""
@@ -296,141 +296,141 @@ INFO:__main__:启动服务器在端口 3000
     "page_number_format": "arabic"
   },
   "reference": {
-    "title_font_name": "黑体",
+    "title_font_name": "SimHei",
     "title_font_size": 16,
-    "body_font_name": "宋体",
+    "body_font_name": "SimSun",
     "body_font_size": 10.5,
     "number_format": "[{}]"
   }
 }
 ```
 
-### 配置项说明
+### Configuration Details
 
-#### 页面设置 (page_settings)
+#### Page Settings (page_settings)
 
-| 参数 | 类型 | 默认值 | 说明 |
+| Parameter | Type | Default | Description |
 |:---|:---:|:---:|:---|
-| top_margin | float | 2.5 | 上页边距 (cm) |
-| bottom_margin | float | 2.5 | 下页边距 (cm) |
-| left_margin | float | 3.0 | 左页边距 (cm) |
-| right_margin | float | 2.5 | 右页边距 (cm) |
-| paper_size | string | "A4" | 纸张大小 |
+| top_margin | float | 2.5 | Top margin (cm) |
+| bottom_margin | float | 2.5 | Bottom margin (cm) |
+| left_margin | float | 3.0 | Left margin (cm) |
+| right_margin | float | 2.5 | Right margin (cm) |
+| paper_size | string | "A4" | Paper size |
 
-#### 标题设置 (heading1/2/3)
+#### Heading Settings (heading1/2/3)
 
-| 参数 | 类型 | 默认值 | 说明 |
+| Parameter | Type | Default | Description |
 |:---|:---:|:---:|:---|
-| font_name | string | "黑体" | 字体名称 |
-| font_size | int | 16/14/12 | 字号 (pt) |
-| bold | bool | true | 是否加粗 |
-| alignment | string | "center"/"left" | 对齐方式 |
-| space_before | float | 1 | 段前间距 (行) |
-| space_after | float | 1 | 段后间距 (行) |
+| font_name | string | "SimHei" | Font name |
+| font_size | int | 16/14/12 | Font size (pt) |
+| bold | bool | true | Bold or not |
+| alignment | string | "center"/"left" | Alignment |
+| space_before | float | 1 | Space before paragraph (lines) |
+| space_after | float | 1 | Space after paragraph (lines) |
 
-#### 正文设置 (body)
+#### Body Settings (body)
 
-| 参数 | 类型 | 默认值 | 说明 |
+| Parameter | Type | Default | Description |
 |:---|:---:|:---:|:---|
-| font_name | string | "宋体" | 字体名称 |
-| font_size | int | 12 | 字号 (pt) |
-| line_spacing | float | 1.5 | 行距倍数 |
-| line_spacing_type | string | "multiple" | 行距类型 |
-| first_line_indent | int | 2 | 首行缩进 (字符) |
+| font_name | string | "SimSun" | Font name |
+| font_size | int | 12 | Font size (pt) |
+| line_spacing | float | 1.5 | Line spacing multiplier |
+| line_spacing_type | string | "multiple" | Line spacing type |
+| first_line_indent | int | 2 | First line indent (characters) |
 
 ---
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 paper-format/
 │
-├── 📂 backend/                      # 后端服务
-│   ├── 📄 app.py                   # Flask 主应用入口
-│   ├── 📄 requirements.txt         # Python 依赖列表
+├── 📂 backend/                      # Backend service
+│   ├── 📄 app.py                   # Flask main application
+│   ├── 📄 requirements.txt         # Python dependencies
 │   │
-│   ├── 📂 utils/                   # 核心工具模块
-│   │   ├── 📄 docx_processor.py   # Word 文档处理核心类
-│   │   │                          # - 文档加载与解析
-│   │   │                          # - 格式检查逻辑
-│   │   │                          # - 格式排版逻辑
+│   ├── 📂 utils/                   # Core utility modules
+│   │   ├── 📄 docx_processor.py   # Word document processor
+│   │   │                          # - Document loading and parsing
+│   │   │                          # - Format checking logic
+│   │   │                          # - Format formatting logic
 │   │   │
-│   │   └── 📄 format_config.py    # 格式配置管理
-│   │                              # - 默认配置定义
-│   │                              # - 配置合并验证
-│   │                              # - 模板管理
+│   │   └── 📄 format_config.py    # Format configuration management
+│   │                              # - Default configuration
+│   │                              # - Configuration merge and validation
+│   │                              # - Template management
 │   │
-│   └── 📂 temp_uploads/            # 临时文件存储目录
-│       └── (上传的文档临时存储)
+│   └── 📂 temp_uploads/            # Temporary file storage
+│       └── (Uploaded documents temporary storage)
 │
-├── 📂 frontend/                    # 前端界面
+├── 📂 frontend/                    # Frontend interface
 │   └── 📂 public/
-│       ├── 📄 index.html           # 主页面 HTML
+│       ├── 📄 index.html           # Main page HTML
 │       │
 │       ├── 📂 css/
-│       │   └── 📄 style.css       # 样式文件
+│       │   └── 📄 style.css       # Stylesheet
 │       │
 │       └── 📂 js/
-│           └── 📄 app.js          # 前端交互逻辑
+│           └── 📄 app.js          # Frontend interaction logic
 │
-├── 📄 README.md                    # 项目说明文档
-├── 📄 LICENSE                      # MIT 开源协议
-├── 📄 .gitignore                   # Git 忽略配置
-└── 📄 install.sh                   # Linux 安装脚本
+├── 📄 README.md                    # Project documentation
+├── 📄 LICENSE                      # MIT License
+├── 📄 .gitignore                   # Git ignore configuration
+└── 📄 install.sh                   # Linux installation script
 ```
 
 ---
 
-## 🔌 API 文档
+## 🔌 API Documentation
 
-### 基础信息
+### Basic Information
 
 - **Base URL**: `http://localhost:3000`
 - **Content-Type**: `application/json`
-- **响应格式**: JSON
+- **Response Format**: JSON
 
-### 接口列表
+### API Endpoints
 
-#### 1. 上传文档
+#### 1. Upload Document
 
 ```http
 POST /api/upload
 Content-Type: multipart/form-data
 ```
 
-**请求参数**
+**Request Parameters**
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 |:---|:---:|:---:|:---|
-| file | File | ✅ | Word 文档文件 (.docx) |
+| file | File | ✅ | Word document file (.docx) |
 
-**响应示例**
+**Response Example**
 
 ```json
 {
   "file_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-  "filename": "毕业论文.docx",
+  "filename": "thesis.docx",
   "size": 102400
 }
 ```
 
 ---
 
-#### 2. 格式检查
+#### 2. Format Check
 
 ```http
 POST /api/check
 Content-Type: application/json
 ```
 
-**请求参数**
+**Request Parameters**
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 |:---|:---:|:---:|:---|
-| file_id | string | ✅ | 上传返回的文件ID |
-| format_config | object | ❌ | 自定义格式配置 |
+| file_id | string | ✅ | File ID from upload response |
+| format_config | object | ❌ | Custom format configuration |
 
-**响应示例**
+**Response Example**
 
 ```json
 {
@@ -444,250 +444,250 @@ Content-Type: application/json
 
 ---
 
-#### 3. 一键排版
+#### 3. One-Click Formatting
 
 ```http
 POST /api/format
 Content-Type: application/json
 ```
 
-**请求参数**
+**Request Parameters**
 
-| 参数 | 类型 | 必填 | 说明 |
+| Parameter | Type | Required | Description |
 |:---|:---:|:---:|:---|
-| file_id | string | ✅ | 上传返回的文件ID |
-| format_config | object | ❌ | 自定义格式配置 |
+| file_id | string | ✅ | File ID from upload response |
+| format_config | object | ❌ | Custom format configuration |
 
-**响应示例**
+**Response Example**
 
 ```json
 {
   "formatted_file_id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
-  "filename": "毕业论文_已排版.docx",
-  "message": "排版完成"
+  "filename": "thesis_formatted.docx",
+  "message": "Formatting completed"
 }
 ```
 
 ---
 
-#### 4. 下载文档
+#### 4. Download Document
 
 ```http
 GET /api/download/{file_id}
 ```
 
-**路径参数**
+**Path Parameters**
 
-| 参数 | 类型 | 说明 |
+| Parameter | Type | Description |
 |:---|:---:|:---|
-| file_id | string | 文件ID |
+| file_id | string | File ID |
 
-**响应**: 文件下载流
+**Response**: File download stream
 
 ---
 
-#### 5. 获取模板列表
+#### 5. Get Template List
 
 ```http
 GET /api/templates
 ```
 
-**响应示例**
+**Response Example**
 
 ```json
 {
   "templates": [
     {
-      "name": "国标通用",
-      "description": "国标通用格式模板",
+      "name": "National Standard",
+      "description": "National standard format template",
       "config": {...}
     }
   ],
-  "default": "国标通用"
+  "default": "National Standard"
 }
 ```
 
 ---
 
-## 🏗️ 技术架构
+## 🏗️ Technical Architecture
 
-### 技术栈
+### Tech Stack
 
-| 层级 | 技术 | 说明 |
+| Layer | Technology | Description |
 |:---:|:---|:---|
-| 前端 | HTML5 + CSS3 + JavaScript | 原生实现，无框架依赖 |
-| 后端 | Flask 2.0+ | Python 轻量级 Web 框架 |
-| 文档处理 | python-docx | Word 文档读写库 |
-| 跨域 | Flask-CORS | 跨域资源共享支持 |
+| Frontend | HTML5 + CSS3 + JavaScript | Native implementation, no framework dependencies |
+| Backend | Flask 2.0+ | Python lightweight web framework |
+| Document Processing | python-docx | Word document read/write library |
+| CORS | Flask-CORS | Cross-origin resource sharing support |
 
-### 系统架构图
+### System Architecture Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                         用户界面层                               │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │  文件上传   │  │  格式检查   │  │  一键排版   │             │
-│  └─────────────┘  └─────────────┘  └─────────────┘             │
+│                         User Interface Layer                     │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
+│  │ File Upload │  │Format Check │  │One-Click Fmt│              │
+│  └─────────────┘  └─────────────┘  └─────────────┘              │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                         API 服务层                               │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                    Flask Application                     │   │
-│  │  /api/upload  │  /api/check  │  /api/format  │  ...     │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│                         API Service Layer                        │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │                    Flask Application                     │    │
+│  │  /api/upload  │  /api/check  │  /api/format  │  ...     │    │
+│  └─────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                         业务逻辑层                               │
-│  ┌─────────────────────┐  ┌─────────────────────┐              │
-│  │   DocxProcessor     │  │   FormatConfig      │              │
-│  │   - 文档解析        │  │   - 配置管理        │              │
-│  │   - 格式检查        │  │   - 模板管理        │              │
-│  │   - 格式排版        │  │   - 参数验证        │              │
-│  └─────────────────────┘  └─────────────────────┘              │
+│                       Business Logic Layer                       │
+│  ┌─────────────────────┐  ┌─────────────────────┐               │
+│  │   DocxProcessor     │  │   FormatConfig      │               │
+│  │   - Document Parse  │  │   - Config Mgmt     │               │
+│  │   - Format Check    │  │   - Template Mgmt   │               │
+│  │   - Format Apply    │  │   - Param Validate  │               │
+│  └─────────────────────┘  └─────────────────────┘               │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                         数据存储层                               │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                   temp_uploads/                          │   │
-│  │              (临时文件存储，自动清理)                      │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│                        Data Storage Layer                        │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │                   temp_uploads/                          │    │
+│  │              (Temporary file storage, auto cleanup)      │    │
+│  └─────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🤝 参与贡献
+## 🤝 Contributing
 
-我们欢迎所有形式的贡献！
+We welcome all forms of contributions!
 
-### 贡献方式
+### How to Contribute
 
-- 🐛 **提交 Bug** - 发现问题请提交 [Issue](https://github.com/1822520752/paper-format/issues)
-- 💡 **功能建议** - 有好想法请提交 [Issue](https://github.com/1822520752/paper-format/issues)
-- 📝 **完善文档** - 帮助完善 README 和代码注释
-- 🔧 **提交代码** - 修复 Bug 或添加新功能
+- 🐛 **Report Bugs** - Submit issues at [Issue Tracker](https://github.com/1822520752/paper-format/issues)
+- 💡 **Feature Requests** - Submit ideas at [Issue Tracker](https://github.com/1822520752/paper-format/issues)
+- 📝 **Improve Documentation** - Help improve README and code comments
+- 🔧 **Submit Code** - Fix bugs or add new features
 
-### 贡献流程
+### Contribution Workflow
 
 ```mermaid
 flowchart TD
-    A[Fork 项目] --> B[克隆到本地]
-    B --> C[创建特性分支]
-    C --> D[编写代码]
-    D --> E[测试验证]
-    E --> F[提交 Commit]
-    F --> G[推送到 Fork]
-    G --> H[创建 Pull Request]
-    H --> I{代码审核}
-    I -->|通过| J[合并到主分支]
-    I -->|需修改| D
+    A[Fork Project] --> B[Clone Locally]
+    B --> C[Create Feature Branch]
+    C --> D[Write Code]
+    D --> E[Test & Verify]
+    E --> F[Commit Changes]
+    F --> G[Push to Fork]
+    G --> H[Create Pull Request]
+    H --> I{Code Review}
+    I -->|Approved| J[Merge to Main]
+    I -->|Changes Needed| D
 ```
 
-### 代码规范
+### Code Standards
 
-- Python 代码遵循 PEP 8 规范
-- 提交信息格式：`type: description`
-  - `feat:` 新功能
-  - `fix:` 修复 Bug
-  - `docs:` 文档更新
-  - `style:` 代码格式
-  - `refactor:` 重构
-
----
-
-## ❓ 常见问题
-
-<details>
-<summary><b>Q1: 支持哪些文档格式？</b></summary>
-
-目前仅支持 **.docx** 格式（Office 2007+），不支持 .doc 格式。
-
-如果你的文档是 .doc 格式，请先用 Word 或 WPS 另存为 .docx 格式。
-
-</details>
-
-<details>
-<summary><b>Q2: 上传的文档会被保存吗？</b></summary>
-
-**不会**。文档仅临时存储在服务器，1小时后自动删除。我们不会收集或存储你的论文内容。
-
-</details>
-
-<details>
-<summary><b>Q3: 排版后会改变论文内容吗？</b></summary>
-
-**不会**。排版仅调整格式（字体、字号、边距等），不会修改论文的文字内容。
-
-</details>
-
-<details>
-<summary><b>Q4: 支持哪些论文格式标准？</b></summary>
-
-目前支持：
-- 国标 GB/T 7713.1-2006《学位论文编写规则》
-- 各高校自定义格式（通过配置实现）
-
-</details>
-
-<details>
-<summary><b>Q5: 文件大小有限制吗？</b></summary>
-
-单个文件最大支持 **20MB**，对于普通论文文档已足够。
-
-</details>
-
-<details>
-<summary><b>Q6: 如何自定义格式配置？</b></summary>
-
-可以通过以下方式：
-1. 在界面上选择预设模板
-2. 通过 API 传入自定义配置 JSON
-3. 修改 `format_config.py` 中的默认配置
-
-</details>
-
-<details>
-<summary><b>Q7: 为什么检查结果不准确？</b></summary>
-
-可能原因：
-- 文档使用了特殊格式或样式
-- 文档包含复杂的表格/公式
-- 字体名称与实际不符
-
-建议：使用标准 Word 格式编写论文，避免复杂的自定义样式。
-
-</details>
+- Python code follows PEP 8 standards
+- Commit message format: `type: description`
+  - `feat:` New feature
+  - `fix:` Bug fix
+  - `docs:` Documentation update
+  - `style:` Code formatting
+  - `refactor:` Code refactoring
 
 ---
 
-## 📜 更新日志
+## ❓ FAQ
+
+<details>
+<summary><b>Q1: What document formats are supported?</b></summary>
+
+Currently only **.docx** format (Office 2007+) is supported. .doc format is not supported.
+
+If your document is in .doc format, please convert it to .docx using Word or WPS first.
+
+</details>
+
+<details>
+<summary><b>Q2: Will uploaded documents be saved?</b></summary>
+
+**No**. Documents are only temporarily stored on the server and automatically deleted after 1 hour. We do not collect or store your thesis content.
+
+</details>
+
+<details>
+<summary><b>Q3: Will formatting change my thesis content?</b></summary>
+
+**No**. Formatting only adjusts the format (fonts, sizes, margins, etc.) and does not modify the text content of your thesis.
+
+</details>
+
+<details>
+<summary><b>Q4: What thesis format standards are supported?</b></summary>
+
+Currently supports:
+- National Standard GB/T 7713.1-2006 "Rules for Writing Academic Papers"
+- Custom university formats (through configuration)
+
+</details>
+
+<details>
+<summary><b>Q5: Is there a file size limit?</b></summary>
+
+Single file maximum **20MB**, which is sufficient for most thesis documents.
+
+</details>
+
+<details>
+<summary><b>Q6: How to customize format configuration?</b></summary>
+
+You can customize through:
+1. Select preset templates in the interface
+2. Pass custom configuration JSON via API
+3. Modify default configuration in `format_config.py`
+
+</details>
+
+<details>
+<summary><b>Q7: Why are the check results inaccurate?</b></summary>
+
+Possible reasons:
+- Document uses special formats or styles
+- Document contains complex tables/formulas
+- Font names don't match actual fonts
+
+Recommendation: Write your thesis using standard Word formats, avoid complex custom styles.
+
+</details>
+
+---
+
+## 📜 Changelog
 
 ### v1.0.0 (2026-02-28)
 
-**🎉 首次发布**
+**🎉 Initial Release**
 
-- ✨ 支持格式检查功能
-- ✨ 支持一键排版功能
-- ✨ 支持预设模板
-- ✨ 支持自定义配置
-- 📝 完善项目文档
+- ✨ Format checking feature
+- ✨ One-click formatting feature
+- ✨ Preset templates support
+- ✨ Custom configuration support
+- 📝 Complete project documentation
 
 ---
 
-## 📄 开源协议
+## 📄 License
 
-本项目基于 **[MIT License](LICENSE)** 开源协议。
+This project is licensed under the **[MIT License](LICENSE)**.
 
 ```
 MIT License
 
-Copyright (c) 2026 试界 TryWorld
+Copyright (c) 2026 TryWorld
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -702,16 +702,16 @@ copies or substantial portions of the Software.
 
 ---
 
-## 👤 关于作者
+## 👤 Author
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/试界-TryWorld-4A90D9?style=for-the-badge&logo=github" alt="试界 TryWorld">
+<img src="https://img.shields.io/badge/TryWorld-Developer-4A90D9?style=for-the-badge&logo=github" alt="TryWorld">
 
-**探索无限可能**
+**Exploring Infinite Possibilities**
 
 [![GitHub](https://img.shields.io/badge/GitHub-1822520752-181717?style=for-the-badge&logo=github)](https://github.com/1822520752)
-[![Email](https://img.shields.io/badge/Email-联系我-red?style=for-the-badge&logo=gmail)](mailto:1822520752@qq.com)
+[![Email](https://img.shields.io/badge/Email-Contact_Me-red?style=for-the-badge&logo=gmail)](mailto:1822520752@qq.com)
 
 </div>
 
@@ -719,11 +719,11 @@ copies or substantial portions of the Software.
 
 <div align="center">
 
-## ⭐ 支持项目
+## ⭐ Support the Project
 
-如果这个项目对你有帮助，请给一个 **Star** ⭐
+If this project helps you, please give it a **Star** ⭐
 
-这对我非常重要，感谢支持！
+Your support means a lot, thank you!
 
 [![Star History Chart](https://api.star-history.com/svg?repos=1822520752/paper-format&type=Date)](https://star-history.com/#1822520752/paper-format&Date)
 
@@ -731,8 +731,8 @@ copies or substantial portions of the Software.
 
 <img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with love">
 
-**© 2026 论文格 - 让论文格式规范变简单**
+**© 2026 PaperFormat - Making thesis formatting simple**
 
-**By 试界 TryWorld**
+**By TryWorld**
 
 </div>
