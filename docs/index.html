@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaperFormat - 论文格 | 毕业论文格式一键排版工具</title>
-    <meta name="description" content="大学毕业论文格式自动检查与一键排版工具，支持国标格式，一键搞定论文排版">
-    <meta name="keywords" content="论文格式,论文排版,毕业论文,格式检查,一键排版,国标格式">
+    <meta name="description" content="大学毕业论文格式自动检查与一键排版工具，让论文格式规范变简单">
+    <meta name="keywords" content="论文格式,论文排版,毕业论文,格式检查,一键排版,Word格式">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* CSS Variables */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         :root {
             --color-primary: #4F46E5;
             --color-primary-light: #818CF8;
             --color-secondary: #7C3AED;
             --color-accent: #06B6D4;
             --gradient-primary: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #9333EA 100%);
-            --gradient-primary-light: linear-gradient(135deg, #818CF8 0%, #A78BFA 50%, #C084FC 100%);
+            --gradient-hero: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 50%, #F5F3FF 100%);
             --glass-bg: rgba(255, 255, 255, 0.72);
             --glass-border: rgba(255, 255, 255, 0.5);
             --glass-shadow: 0 8px 32px rgba(79, 70, 229, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         html {
@@ -34,78 +33,72 @@
         }
 
         body {
-            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 50%, #F5F3FF 100%);
-            color: #1E293B;
+            font-family: 'Noto Sans SC', 'Inter', system-ui, sans-serif;
+            background: var(--gradient-hero);
             min-height: 100vh;
-            overflow-x: hidden;
+            color: #1E293B;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Background Effects */
         .bg-mesh {
             position: fixed;
             inset: 0;
-            background: radial-gradient(at 40% 20%, rgba(79, 70, 229, 0.15) 0px, transparent 50%),
-                        radial-gradient(at 80% 0%, rgba(124, 58, 237, 0.12) 0px, transparent 50%),
-                        radial-gradient(at 0% 50%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
-            z-index: -1;
+            background: 
+                radial-gradient(at 40% 20%, rgba(79, 70, 229, 0.12) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, rgba(124, 58, 237, 0.1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, rgba(6, 182, 212, 0.08) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, rgba(147, 51, 234, 0.08) 0px, transparent 50%);
+            z-index: -2;
             animation: meshFloat 20s ease-in-out infinite;
         }
 
         @keyframes meshFloat {
             0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(2deg); }
+            50% { transform: scale(1.05) rotate(1deg); }
         }
 
         .orb {
             position: fixed;
             border-radius: 50%;
             filter: blur(80px);
-            opacity: 0.4;
+            opacity: 0.35;
             pointer-events: none;
             z-index: -1;
             animation: orbFloat 15s ease-in-out infinite;
         }
 
         .orb-1 {
-            width: 600px;
-            height: 600px;
+            width: 500px;
+            height: 500px;
             background: radial-gradient(circle, rgba(79, 70, 229, 0.3), transparent 70%);
-            top: -200px;
-            right: -200px;
+            top: -150px;
+            right: -150px;
         }
 
         .orb-2 {
-            width: 500px;
-            height: 500px;
+            width: 400px;
+            height: 400px;
             background: radial-gradient(circle, rgba(124, 58, 237, 0.25), transparent 70%);
-            bottom: -150px;
-            left: -150px;
+            bottom: -100px;
+            left: -100px;
             animation-delay: -5s;
         }
 
         @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(30px, -30px) scale(1.05); }
-            50% { transform: translate(-20px, 20px) scale(0.95); }
-            75% { transform: translate(20px, 30px) scale(1.02); }
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -20px); }
         }
 
         /* Header */
         .header {
             position: fixed;
-            top: 16px;
-            left: 16px;
-            right: 16px;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 100;
+            padding: 1rem 2rem;
         }
 
         .header-inner {
@@ -114,25 +107,25 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 24px;
+            padding: 0.75rem 1.5rem;
             background: var(--glass-bg);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
+            border-radius: 2rem;
             box-shadow: var(--glass-shadow);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0.75rem;
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -147,19 +140,18 @@
         }
 
         .logo-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             color: white;
         }
 
         .logo-text {
             display: flex;
             flex-direction: column;
-            gap: 2px;
         }
 
         .logo-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
             background: var(--gradient-primary);
             -webkit-background-clip: text;
@@ -168,49 +160,73 @@
         }
 
         .logo-subtitle {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #64748B;
             font-weight: 500;
         }
 
-        .header-cta {
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #475569;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--color-primary);
+        }
+
+        .btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
             background: var(--gradient-primary);
             color: white;
             text-decoration: none;
-            border-radius: 12px;
             font-weight: 600;
-            font-size: 0.9375rem;
+            font-size: 0.9rem;
+            border-radius: 12px;
             box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
-            transition: all 0.2s ease;
+            transition: all 0.2s;
         }
 
-        .header-cta:hover {
+        .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
         }
 
         /* Hero Section */
         .hero {
-            padding: 160px 24px 80px;
+            padding: 10rem 2rem 6rem;
             text-align: center;
+            position: relative;
         }
 
-        .hero-eyebrow {
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
             background: rgba(79, 70, 229, 0.08);
             border: 1px solid rgba(79, 70, 229, 0.15);
             border-radius: 9999px;
             font-size: 0.875rem;
             font-weight: 500;
             color: var(--color-primary);
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
             animation: fadeInDown 0.6s ease-out;
         }
 
@@ -218,8 +234,8 @@
             font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 800;
             line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
             animation: fadeInUp 0.6s ease-out 0.1s both;
         }
 
@@ -234,66 +250,55 @@
             font-size: 1.25rem;
             color: #64748B;
             max-width: 600px;
-            margin: 0 auto 40px;
+            margin: 0 auto 2.5rem;
             line-height: 1.7;
             animation: fadeInUp 0.6s ease-out 0.2s both;
         }
 
         .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 32px;
-            background: var(--gradient-primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 16px;
-            font-weight: 600;
-            font-size: 1.125rem;
-            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4);
-            transition: all 0.3s ease;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
             animation: fadeInUp 0.6s ease-out 0.3s both;
         }
 
-        .hero-cta:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 12px 32px rgba(79, 70, 229, 0.5);
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1rem;
         }
 
-        .hero-cta svg {
-            transition: transform 0.3s ease;
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid rgba(79, 70, 229, 0.25);
+            border-radius: 12px;
+            transition: all 0.2s;
         }
 
-        .hero-cta:hover svg {
-            transform: translateX(4px);
+        .btn-outline:hover {
+            background: rgba(79, 70, 229, 0.05);
+            border-color: var(--color-primary);
         }
 
         /* Stats */
         .stats {
             display: flex;
             justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-top: 60px;
+            gap: 3rem;
+            margin-top: 4rem;
             animation: fadeInUp 0.6s ease-out 0.4s both;
         }
 
-        .stat-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 24px 32px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            box-shadow: var(--glass-shadow);
-            min-width: 140px;
-            transition: all 0.2s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-4px);
+        .stat-item {
+            text-align: center;
         }
 
         .stat-value {
@@ -303,59 +308,53 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1;
         }
 
         .stat-label {
             font-size: 0.875rem;
             color: #64748B;
-            font-weight: 500;
-            margin-top: 8px;
+            margin-top: 0.25rem;
         }
 
         /* Features Section */
-        .features {
-            padding: 80px 24px;
+        .section {
+            padding: 6rem 2rem;
         }
 
         .section-title {
             font-size: 2rem;
             font-weight: 800;
             text-align: center;
-            margin-bottom: 16px;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
 
         .section-subtitle {
             text-align: center;
             color: #64748B;
-            font-size: 1.125rem;
-            margin-bottom: 48px;
+            max-width: 600px;
+            margin: 0 auto 3rem;
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            max-width: 1000px;
+            gap: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .feature-card {
-            padding: 32px;
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
+            border-radius: 1.5rem;
+            padding: 2rem;
             box-shadow: var(--glass-shadow);
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
         .feature-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-4px);
             box-shadow: 0 16px 48px rgba(79, 70, 229, 0.12);
         }
 
@@ -365,132 +364,114 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--gradient-primary-light);
-            border-radius: 16px;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+            border-radius: 14px;
+            margin-bottom: 1.25rem;
         }
 
         .feature-icon svg {
             width: 28px;
             height: 28px;
-            color: white;
+            color: var(--color-primary);
         }
 
         .feature-title {
             font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 0.75rem;
             color: #1E293B;
         }
 
         .feature-desc {
             color: #64748B;
-            line-height: 1.7;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* How It Works */
-        .how-it-works {
-            padding: 80px 24px;
-            background: linear-gradient(180deg, transparent, rgba(79, 70, 229, 0.03), transparent);
-        }
-
         .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .step {
             display: flex;
-            gap: 24px;
+            gap: 2rem;
             align-items: flex-start;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 60px;
+            width: 2px;
+            height: calc(100% - 20px);
+            background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+            border-radius: 1px;
         }
 
         .step-number {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: var(--gradient-primary);
-            border-radius: 50%;
             color: white;
             font-weight: 800;
             font-size: 1.25rem;
+            border-radius: 50%;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
         }
 
         .step-content {
             flex: 1;
+            padding-top: 0.5rem;
         }
 
         .step-title {
             font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             color: #1E293B;
         }
 
         .step-desc {
             color: #64748B;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 80px 24px;
             text-align: center;
-        }
-
-        .cta-card {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 48px;
-            background: var(--gradient-primary);
-            border-radius: 32px;
-            box-shadow: 0 16px 48px rgba(79, 70, 229, 0.3);
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(124, 58, 237, 0.03));
         }
 
         .cta-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 800;
-            color: white;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
         }
 
         .cta-desc {
-            color: rgba(255, 255, 255, 0.9);
+            color: #64748B;
             font-size: 1.125rem;
-            margin-bottom: 32px;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 16px 32px;
-            background: white;
-            color: var(--color-primary);
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Footer */
         .footer {
-            padding: 40px 24px;
             text-align: center;
-            border-top: 1px solid rgba(79, 70, 229, 0.1);
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(79, 70, 229, 0.08);
         }
 
         .footer-text {
@@ -509,15 +490,15 @@
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 24px;
-            margin-top: 16px;
+            gap: 2rem;
+            margin-top: 1.5rem;
         }
 
         .footer-link {
             color: #64748B;
             text-decoration: none;
             font-size: 0.875rem;
-            transition: color 0.2s ease;
+            transition: color 0.2s;
         }
 
         .footer-link:hover {
@@ -549,24 +530,16 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .header-inner {
-                padding: 12px 16px;
+            .header {
+                padding: 0.75rem 1rem;
             }
 
-            .logo-title {
-                font-size: 1.25rem;
-            }
-
-            .logo-subtitle {
-                display: none;
-            }
-
-            .header-cta span {
+            .nav-links {
                 display: none;
             }
 
             .hero {
-                padding: 120px 16px 60px;
+                padding: 8rem 1.5rem 4rem;
             }
 
             .hero-description {
@@ -574,34 +547,25 @@
             }
 
             .stats {
-                gap: 16px;
-            }
-
-            .stat-card {
-                padding: 16px 24px;
-                min-width: 100px;
+                flex-direction: column;
+                gap: 1.5rem;
             }
 
             .stat-value {
                 font-size: 2rem;
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
+            .section {
+                padding: 4rem 1.5rem;
             }
 
             .step {
                 flex-direction: column;
-                text-align: center;
-                align-items: center;
+                gap: 1rem;
             }
 
-            .cta-card {
-                padding: 32px 24px;
-            }
-
-            .cta-title {
-                font-size: 1.5rem;
+            .step:not(:last-child)::after {
+                display: none;
             }
 
             .orb {
@@ -630,20 +594,26 @@
                     <span class="logo-subtitle">By TryWorld</span>
                 </div>
             </a>
-            <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="header-cta">
-                <span>立即使用</span>
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-            </a>
+            <nav class="nav-links">
+                <a href="#features" class="nav-link">功能特性</a>
+                <a href="#how-it-works" class="nav-link">使用方法</a>
+                <a href="https://github.com/1822520752/paper-format" class="nav-link" target="_blank">GitHub</a>
+                <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="btn-primary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    立即体验
+                </a>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-eyebrow">
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
                 智能论文格式化工具
@@ -655,101 +625,133 @@
             <p class="hero-description">
                 上传 Word 文档，智能检查格式问题，一键排版符合国标规范，让论文格式调整变得简单高效
             </p>
-            <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="hero-cta">
-                开始使用
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-            </a>
+            <div class="hero-cta">
+                <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="btn-primary btn-large">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    开始使用
+                </a>
+                <a href="https://github.com/1822520752/paper-format" class="btn-outline" target="_blank">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    查看源码
+                </a>
+            </div>
             <div class="stats">
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-value">15+</div>
                     <div class="stat-label">项格式检查</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-value">1键</div>
                     <div class="stat-label">自动排版</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-item">
                     <div class="stat-value">100%</div>
-                    <div class="stat-label">免费使用</div>
+                    <div class="stat-label">免费开源</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">核心功能</h2>
-            <p class="section-subtitle">专业的论文格式检查与排版工具</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">智能格式检查</h3>
-                    <p class="feature-desc">自动检测页边距、字体、行距、缩进等15+项格式要求，生成详细检查报告</p>
+    <section id="features" class="section">
+        <h2 class="section-title">功能特性</h2>
+        <p class="section-subtitle">专业的论文格式检查与排版工具，让您的论文符合国标规范</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                    </svg>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">一键自动排版</h3>
-                    <p class="feature-desc">点击即可自动修正所有格式问题，生成符合国标规范的论文文档</p>
+                <h3 class="feature-title">智能格式检查</h3>
+                <p class="feature-desc">自动检测页边距、字体、行距、标题格式等15+项格式要求，生成详细检查报告</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">自定义配置</h3>
-                    <p class="feature-desc">支持自定义格式参数，可导入导出配置文件，适配不同学校要求</p>
+                <h3 class="feature-title">一键自动排版</h3>
+                <p class="feature-desc">点击按钮即可自动修正所有格式问题，生成符合国标规范的新文档</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                    </svg>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">安全可靠</h3>
-                    <p class="feature-desc">文件处理完成后立即删除，不保存不备份，保护您的论文隐私安全</p>
+                <h3 class="feature-title">自定义配置</h3>
+                <p class="feature-desc">支持自定义格式参数，可导入导出配置文件，适配不同学校的格式要求</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
                 </div>
+                <h3 class="feature-title">安全可靠</h3>
+                <p class="feature-desc">文件处理完成后立即删除，不保存不备份，您的论文内容绝对安全</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">预设模板</h3>
+                <p class="feature-desc">内置国标通用、理工科、文科等多种模板，一键应用专业格式</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">云端处理</h3>
+                <p class="feature-desc">无需安装软件，打开浏览器即可使用，随时随地处理论文格式</p>
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">使用步骤</h2>
-            <p class="section-subtitle">简单三步，完成论文格式规范化</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">上传论文文档</h3>
-                        <p class="step-desc">点击上传区域或拖拽 .docx 格式的论文文档，系统会自动保存并准备检查</p>
-                    </div>
+    <section id="how-it-works" class="section">
+        <h2 class="section-title">使用方法</h2>
+        <p class="section-subtitle">简单三步，轻松完成论文格式规范化</p>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">上传论文文档</h3>
+                    <p class="step-desc">点击上传区域或拖拽 .docx 格式的论文文档，系统会自动保存并准备检查。支持最大 20MB 的文件。</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">检查格式问题</h3>
-                        <p class="step-desc">点击"检查格式"按钮，系统会逐项检查页边距、字体、行距等格式要求</p>
-                    </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">检查格式问题</h3>
+                    <p class="step-desc">点击"检查格式"按钮，系统会逐项检查页边距、字体、行距等15+项格式要求，生成详细报告。</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">一键自动排版</h3>
-                        <p class="step-desc">点击"一键排版"按钮，系统会自动修正所有格式问题，下载规范文档</p>
-                    </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">一键自动排版</h3>
+                    <p class="step-desc">点击"一键排版"按钮，系统会自动修正所有格式问题，生成符合规范的新文档供下载。</p>
                 </div>
             </div>
         </div>
@@ -757,30 +759,26 @@
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <h2 class="cta-title">准备好开始了吗？</h2>
-                <p class="cta-desc">立即使用论文格，让论文格式调整变得简单高效</p>
-                <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="cta-button">
-                    立即使用
-                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
+        <h2 class="cta-title">准备好开始了吗？</h2>
+        <p class="cta-desc">让论文格成为您的论文格式助手，告别繁琐的格式调整工作</p>
+        <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="btn-primary btn-large">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            立即开始使用
+        </a>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p class="footer-text">
-                © 2026 <span class="footer-brand">试界 TryWorld</span> - 论文格 - 让论文格式规范变简单
-            </p>
-            <div class="footer-links">
-                <a href="https://github.com/1822520752/paper-format" class="footer-link" target="_blank">GitHub</a>
-                <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="footer-link" target="_blank">在线使用</a>
-            </div>
+        <p class="footer-text">
+            © 2026 <span class="footer-brand">试界 TryWorld</span> - 论文格 - 让论文格式规范变简单
+        </p>
+        <div class="footer-links">
+            <a href="https://github.com/1822520752/paper-format" class="footer-link" target="_blank">GitHub</a>
+            <a href="https://paperformat-zx1822520752.app.haisnap.com/" class="footer-link">在线体验</a>
+            <a href="https://github.com/1822520752/paper-format/issues" class="footer-link" target="_blank">反馈问题</a>
         </div>
     </footer>
 </body>
