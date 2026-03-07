@@ -1,5 +1,13 @@
 <div align="center">
 
+[English](README.md) · [中文](README_zh.md)
+
+</div>
+
+---
+
+<div align="center">
+
 <img src="https://img.shields.io/badge/PaperFormat-Thesis_Formatting_Tool-4A90D9?style=for-the-badge&logo=googledocs&logoColor=white" alt="PaperFormat">
 
 # 📝 PaperFormat
@@ -182,7 +190,8 @@ paper-format/
 │       ├── css/style.css    # Styles
 │       └── js/app.js        # Scripts
 │
-├── README.md                # Documentation
+├── README.md                # Documentation (English)
+├── README_zh.md             # Documentation (Chinese)
 └── LICENSE                  # MIT License
 ```
 
