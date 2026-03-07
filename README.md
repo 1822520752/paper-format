@@ -1,6 +1,7 @@
 <div align="center">
 
-[English](README.md) · [中文](README_zh.md)
+[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README.md)
+[![中文](https://img.shields.io/badge/Language-中文-red?style=for-the-badge)](README_zh.md)
 
 </div>
 
@@ -16,13 +17,41 @@
 
 *Making thesis formatting simple · Making graduation easier*
 
-[![Python Version](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![Flask](https://img.shields.io/badge/Flask-2.0+-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/License-MIT-success?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/1822520752/paper-format?style=flat-square&logo=github&color=yellow)](https://github.com/1822520752/paper-format/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/1822520752/paper-format?style=flat-square&logo=github)](https://github.com/1822520752/paper-format/issues)
+<p align="center">
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  </a>
+  <a href="https://flask.palletsprojects.com/">
+    <img src="https://img.shields.io/badge/Flask-2.0+-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="License">
+  </a>
+</p>
 
-**[🚀 Live Demo](https://paperformat-zx1822520752.app.haisnap.com/) · [📖 Documentation](#user-guide) · [🐛 Report Bug](https://github.com/1822520752/paper-format/issues) · [💡 Request Feature](https://github.com/1822520752/paper-format/issues)**
+<p align="center">
+  <a href="https://github.com/1822520752/paper-format/stargazers">
+    <img src="https://img.shields.io/github/stars/1822520752/paper-format?style=for-the-badge&logo=github&color=yellow" alt="Stars">
+  </a>
+  <a href="https://github.com/1822520752/paper-format/network/members">
+    <img src="https://img.shields.io/github/forks/1822520752/paper-format?style=for-the-badge&logo=github" alt="Forks">
+  </a>
+  <a href="https://github.com/1822520752/paper-format/issues">
+    <img src="https://img.shields.io/github/issues/1822520752/paper-format?style=for-the-badge&logo=github" alt="Issues">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://paperformat-zx1822520752.app.haisnap.com/">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Click_Here-4F46E5?style=for-the-badge" alt="Live Demo">
+  </a>
+  <a href="https://github.com/1822520752/paper-format/issues">
+    <img src="https://img.shields.io/badge/�_Report_Bug-Click_Here-DC2626?style=for-the-badge" alt="Report Bug">
+  </a>
+  <a href="https://github.com/1822520752/paper-format/issues">
+    <img src="https://img.shields.io/badge/💡_Request_Feature-Click_Here-059669?style=for-the-badge" alt="Request Feature">
+  </a>
+</p>
 
 </div>
 
@@ -270,15 +299,25 @@ This project is licensed under the **MIT License**.
 
 **TryWorld**
 
-[![GitHub](https://img.shields.io/badge/GitHub-1822520752-181717?style=for-the-badge&logo=github)](https://github.com/1822520752)
+<p align="center">
+  <a href="https://github.com/1822520752">
+    <img src="https://img.shields.io/badge/GitHub-1822520752-181717?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+</p>
 
 ---
 
 <div align="center">
 
-**⭐ If this project helps you, please give it a Star!**
+## ⭐ Star History
 
-Made with ❤️ by TryWorld
+**If this project helps you, please give it a Star!**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=1822520752/paper-format&type=Date)](https://star-history.com/#1822520752/paper-format&Date)
+
+---
+
+<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with love">
 
 **© 2026 PaperFormat - Making thesis formatting simple**
 
