@@ -1,39 +1,27 @@
 <div align="center">
 
-<a href="README.md">
-  <img src="https://img.shields.io/badge/Language-English-4F46E5?style=for-the-badge&labelColor=3730A3" alt="English">
-</a>
-<a href="README_zh.md">
-  <img src="https://img.shields.io/badge/Language-中文-DC2626?style=for-the-badge&labelColor=B91C1C" alt="中文">
-</a>
-
-</div>
-
-<br>
-
-<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+SC:wght@700&size=42&duration=3000&pause=1000&color=4F46E5&center=true&vCenter=true&repeat=false&width=600&lines=PaperFormat" alt="PaperFormat">
-
-### ✨ One-Click Thesis Formatting Tool
-
-**Making thesis formatting simple · Making graduation easier**
-
-<br>
-
-<p align="center">
-  <a href="https://paperformat-zx1822520752.app.haisnap.com/">
-    <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-Try_Now-4F46E5?style=for-the-badge&logoColor=white&labelColor=3730A3" alt="Live Demo">
+<!-- Language Switcher -->
+<p>
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/English-4F46E5?style=for-the-badge&logo=googletranslate&logoColor=white" alt="English">
+  </a>
+  <a href="README_zh.md">
+    <img src="https://img.shields.io/badge/中文-DC2626?style=for-the-badge&logo=googletranslate&logoColor=white" alt="中文">
   </a>
 </p>
 
-<p align="center">
+<!-- Animated Title -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=4F46E5&height=120&section=header&text=PaperFormat&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=One-Click%20Thesis%20Formatting%20Tool&descAlignY=55&descSize=16" alt="PaperFormat">
+
+<!-- Shields -->
+<p>
   <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Flask-2.0+-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask">
   <img src="https://img.shields.io/badge/License-MIT-059669?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/PRs-Welcome-4F46E5?style=flat-square" alt="PRs Welcome">
 </p>
 
-<p align="center">
+<p>
   <a href="https://github.com/1822520752/paper-format/stargazers">
     <img src="https://img.shields.io/github/stars/1822520752/paper-format?style=flat-square&logo=github&color=yellow" alt="Stars">
   </a>
@@ -45,35 +33,49 @@
   </a>
 </p>
 
+<!-- CTA Button -->
+<p>
+  <a href="https://paperformat-zx1822520752.app.haisnap.com/">
+    <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-Try_Now!-4F46E5?style=for-the-badge&logoColor=white" alt="Live Demo">
+  </a>
+</p>
+
 </div>
 
 ---
 
-## 🎯 What is PaperFormat?
+## 📖 Overview
 
-**PaperFormat** is a smart thesis formatting tool designed for university graduates. Upload your Word document, check format issues automatically, and format with one click.
+> **PaperFormat** is a smart thesis formatting tool for university graduates.
+> Upload Word → Check format → One-click formatting → Download
 
 <table>
 <tr>
-<td width="33%" align="center">
+<td align="center" width="33%">
 
 ### 📤 Upload
 
-Drag & drop your .docx file
+**Drag & Drop**
+
+.docx files supported
 
 </td>
-<td width="33%" align="center">
+<td align="center" width="33%">
 
 ### 🔍 Check
 
-Auto-check 15+ format items
+**15+ Items**
+
+Auto format detection
 
 </td>
-<td width="33%" align="center">
+<td align="center" width="33%">
 
 ### ✨ Format
 
-One-click formatting
+**One Click**
+
+Instant download
 
 </td>
 </tr>
@@ -85,28 +87,32 @@ One-click formatting
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🔍 Smart Format Checking
 
-- 📄 **Page Settings** - Margins, paper size
-- 🔤 **Heading Format** - Font, size, alignment
-- 📝 **Body Format** - Font, line spacing, indent
-- 📋 **Abstract Format** - Title and body
-- 🖼️ **Captions** - Figure and table captions
-- 📚 **References** - Format checking
-- 📑 **Header/Footer** - Page numbers
+| Item | Description |
+|:---:|:---|
+| 📄 | Page margins & size |
+| 🔤 | Heading styles |
+| 📝 | Body formatting |
+| 📋 | Abstract format |
+| 🖼️ | Figure captions |
+| 📚 | References |
+| 📑 | Headers & footers |
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### 🎨 One-Click Formatting
 
-- 🎯 **Auto Recognition** - Smart content detection
-- ⚡ **Batch Processing** - All at once
-- 🔧 **Custom Config** - Flexible settings
-- 📥 **Content Safe** - No text changes
-- 💾 **Instant Download** - Get result now
+| Feature | Benefit |
+|:---:|:---|
+| 🎯 | Auto content detection |
+| ⚡ | Batch processing |
+| 🔧 | Custom settings |
+| 📥 | Content preserved |
+| 💾 | Instant download |
 
 </td>
 </tr>
@@ -116,27 +122,32 @@ One-click formatting
 
 ## 🚀 Quick Start
 
-### Installation
+### 📦 Installation
 
 ```bash
-# Clone
+# Clone repository
 git clone https://github.com/1822520752/paper-format.git
 
-# Install
+# Navigate to backend
 cd paper-format/backend
+
+# Install dependencies
 pip install -r requirements.txt
 
-# Run
+# Start server
 python app.py
 ```
 
-### Usage
+### 🎮 Usage
 
 Open **http://localhost:3000** in your browser.
 
 ---
 
-## ⚙️ Default Configuration
+## ⚙️ Configuration
+
+<details>
+<summary><b>📋 Default Settings (National Standard)</b></summary>
 
 | Setting | Value |
 |:---|:---:|
@@ -151,62 +162,54 @@ Open **http://localhost:3000** in your browser.
 | Line Spacing | 1.5x |
 | First Line Indent | 2 characters |
 
----
-
-## 📁 Project Structure
-
-```
-paper-format/
-├── backend/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── utils/
-├── frontend/
-│   └── public/
-├── README.md
-├── README_zh.md
-└── LICENSE
-```
+</details>
 
 ---
 
-## 🔌 API
+## � API Reference
 
-| Endpoint | Method | Description |
-|:---|:---:|:---|
-| `/api/upload` | POST | Upload document |
-| `/api/check` | POST | Format check |
-| `/api/format` | POST | One-click format |
-| `/api/download/<id>` | GET | Download result |
-| `/api/templates` | GET | Get templates |
+| Method | Endpoint | Description |
+|:---:|:---|:---|
+| `POST` | `/api/upload` | Upload document |
+| `POST` | `/api/check` | Format check |
+| `POST` | `/api/format` | One-click format |
+| `GET` | `/api/download/<id>` | Download result |
+| `GET` | `/api/templates` | List templates |
 
 ---
 
 ## ❓ FAQ
 
 <details>
-<summary><b>What formats are supported?</b></summary>
-<br>
-Only <code>.docx</code> format (Office 2007+) is supported.
+<summary><b>What file formats are supported?</b></summary>
+
+Only `.docx` format (Microsoft Word 2007+) is supported. The older `.doc` format is not supported.
+
 </details>
 
 <details>
 <summary><b>Will my content be modified?</b></summary>
-<br>
-No! Only formatting is changed, text content remains untouched.
+
+**No!** The system only modifies formatting (fonts, margins, spacing). Your text content remains completely unchanged.
+
 </details>
 
 <details>
 <summary><b>Is my file safe?</b></summary>
-<br>
-Yes! Files are deleted automatically after 1 hour.
+
+**Yes!** Files are processed temporarily and automatically deleted after 1 hour. We never store or backup your documents.
+
 </details>
 
 ---
 
 ## 🤝 Contributing
 
-Contributions welcome! Feel free to submit issues and pull requests.
+Contributions are welcome! Feel free to:
+
+- 🐛 [Report bugs](https://github.com/1822520752/paper-format/issues)
+- 💡 [Request features](https://github.com/1822520752/paper-format/issues)
+- 🔧 Submit pull requests
 
 ---
 
@@ -228,8 +231,10 @@ Contributions welcome! Feel free to submit issues and pull requests.
 
 ---
 
-<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square" alt="Made with love">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=4F46E5&height=80&section=footer" alt="Footer">
 
-**© 2026 PaperFormat · By TryWorld**
+**Made with ❤️ by TryWorld**
+
+**© 2026 PaperFormat**
 
 </div>
