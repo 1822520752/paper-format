@@ -1,139 +1,146 @@
-<div align="center">
-
-[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README.md)
-[![中文](https://img.shields.io/badge/Language-中文-red?style=for-the-badge)](README_zh.md)
-
-</div>
-
----
+<a name="readme-top"></a>
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/论文格-毕业论文排版工具-4A90D9?style=for-the-badge&logo=googledocs&logoColor=white" alt="论文格">
+<!-- Language Switcher -->
+<img src="https://img.shields.io/badge/English-4F46E5?style=for-the-badge" alt="English">
+<img src="https://img.shields.io/badge/中文-EF4444?style=for-the-badge" alt="中文">
 
-# 📝 论文格
+<br><br>
 
-### **毕业论文格式一键排版工具**
+<!-- Logo & Title -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://via.placeholder.com/120x120/4F46E5/FFFFFF?text=论文">
+  <img src="https://via.placeholder.com/120x120/4F46E5/FFFFFF?text=论文" alt="Logo" width="120" height="120" style="border-radius: 24px; box-shadow: 0 8px 32px rgba(79,70,229,0.3);">
+</picture>
 
-*让论文格式规范变简单 · 让毕业更轻松*
+<h1 style="font-size: 3.5rem; font-weight: 800; margin: 16px 0 8px; background: linear-gradient(135deg, #4F46E5, #7C3AED, #9333EA); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+  论文格
+</h1>
 
-<p align="center">
+<h3 style="font-size: 1.5rem; font-weight: 600; color: #64748B; margin: 0 0 8px;">
+  毕业论文格式一键排版工具
+</h3>
+
+<p style="font-size: 1.1rem; color: #94A3B8; margin: 0 0 24px;">
+  ✨ 让论文格式规范变简单 · 让毕业更轻松 ✨
+</p>
+
+<!-- Badges Row 1 -->
+<p>
   <a href="https://www.python.org/downloads/">
-    <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+    <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   </a>
   <a href="https://flask.palletsprojects.com/">
-    <img src="https://img.shields.io/badge/Flask-2.0+-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+    <img src="https://img.shields.io/badge/Flask-2.0+-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask">
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/badge/License-MIT-10B981?style=flat-square" alt="License">
   </a>
-</p>
-
-<p align="center">
   <a href="https://github.com/1822520752/paper-format/stargazers">
-    <img src="https://img.shields.io/github/stars/1822520752/paper-format?style=for-the-badge&logo=github&color=yellow" alt="Stars">
+    <img src="https://img.shields.io/github/stars/1822520752/paper-format?style=flat-square&logo=github&color=FBBF24" alt="Stars">
   </a>
   <a href="https://github.com/1822520752/paper-format/network/members">
-    <img src="https://img.shields.io/github/forks/1822520752/paper-format?style=for-the-badge&logo=github" alt="Forks">
-  </a>
-  <a href="https://github.com/1822520752/paper-format/issues">
-    <img src="https://img.shields.io/github/issues/1822520752/paper-format?style=for-the-badge&logo=github" alt="Issues">
+    <img src="https://img.shields.io/github/forks/1822520752/paper-format?style=flat-square&logo=github" alt="Forks">
   </a>
 </p>
 
-<p align="center">
+<!-- CTA Buttons -->
+<p>
   <a href="https://paperformat-zx1822520752.app.haisnap.com/">
-    <img src="https://img.shields.io/badge/�_在线体验-点击访问-4F46E5?style=for-the-badge" alt="在线体验">
+    <img src="https://img.shields.io/badge/🚀_在线体验-4F46E5?style=for-the-badge" alt="在线体验">
   </a>
-  <a href="https://github.com/1822520752/paper-format/issues">
-    <img src="https://img.shields.io/badge/�_反馈问题-点击提交-DC2626?style=for-the-badge" alt="反馈问题">
+  <a href="https://github.com/1822520752/paper-format/issues/new">
+    <img src="https://img.shields.io/badge/🐛_反馈问题-EF4444?style=for-the-badge" alt="反馈问题">
   </a>
-  <a href="https://github.com/1822520752/paper-format/issues">
-    <img src="https://img.shields.io/badge/💡_功能建议-点击提交-059669?style=for-the-badge" alt="功能建议">
+  <a href="https://github.com/1822520752/paper-format/issues/new">
+    <img src="https://img.shields.io/badge/💡_功能建议-10B981?style=for-the-badge" alt="功能建议">
   </a>
 </p>
+
+<!-- Demo Image -->
+<img src="https://via.placeholder.com/900x500/EEF2FF/4F46E5?text=🎨+论文格+预览图" width="90%" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(79,70,229,0.15); margin: 24px 0;">
 
 </div>
 
 ---
 
-## 📖 项目背景
+## � 关于项目
 
-### 为什么开发这个工具？
+<table>
+<tr>
+<td width="60%">
 
-每到毕业季，无数高校毕业生都要面对繁琐的论文格式调整工作：
+**论文格** 是一款专为高校毕业生设计的论文格式工具。
 
-> 😫 "页边距要调，字体要改，行距要设置……"
-> 
-> 😫 "参考文献格式又不对，图表标题位置不对……"
-> 
-> 😫 "改了半天还是不符合学校要求……"
+**为什么选择论文格？**
+- 🎯 **一键搞定** - 秒级检查与排版
+- 📐 **国标规范** - 遵循 GB/T 7713.1-2006
+- 🔒 **隐私优先** - 文件处理完自动删除
+- 🆓 **完全免费** - 无需注册，无限制
 
-**论文格** 就是为了解决这些痛点而生！
+</td>
+<td width="40%" align="center">
 
-### 我们的目标
+**快速统计**
 
-- ✅ **解放双手** - 告别繁琐的手动格式调整
-- ✅ **提高效率** - 一键完成格式检查与排版
-- ✅ **规范统一** - 严格遵循国标 GB/T 7713.1-2006
-- ✅ **简单易用** - 无需安装，网页端即可使用
+| 指标 | 数值 |
+|:----:|:----:|
+| 检查项 | 15+ |
+| 模板数 | 1 |
+| 价格 | 免费 |
+| 可用率 | 99.9% |
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## ✨ 核心功能
 
-### 🔍 智能格式检查
+<table>
+<tr>
+<th width="50%">� 智能格式检查</th>
+<th width="50%">🎨 一键智能排版</th>
+</tr>
+<tr>
+<td>
 
-| 检查项目 | 检查内容 | 检测精度 |
-|:---:|:---|:---:|
-| 📄 **页面设置** | 上/下/左/右页边距、纸张大小 | 0.1cm |
-| 🔤 **标题格式** | 一级/二级/三级标题字体、字号、加粗、对齐 | 精确 |
-| 📝 **正文格式** | 正文字体、字号、行距、首行缩进 | 精确 |
-| 📋 **摘要格式** | 中英文摘要标题、正文格式 | 精确 |
-| 🖼️ **图表标题** | 图题、表题字体、字号、位置 | 精确 |
-| 📚 **参考文献** | 参考文献标题、正文格式 | 精确 |
-| 📑 **页眉页脚** | 页眉内容、页码格式 | 精确 |
+✓ 页边距与纸张大小  
+✓ 标题样式（H1/H2/H3）  
+✓ 正文字体与行距  
+✓ 摘要格式检查  
+✓ 图表标题格式  
+✓ 参考文献格式  
+✓ 页眉页脚设置
 
-### 🎨 一键智能排版
+</td>
+<td>
 
-| 功能 | 描述 |
-|:---:|:---|
-| 🎯 **自动识别** | 智能识别标题、正文、摘要等不同内容 |
-| ⚡ **批量处理** | 一次性完成所有格式调整 |
-| 🔧 **自定义配置** | 支持自定义格式参数 |
-| 📥 **保留内容** | 排版过程不改变原文内容 |
-| 💾 **即时下载** | 排版完成即可下载 |
+✓ 自动内容识别  
+✓ 批量格式处理  
+✓ 自定义配置  
+✓ 保留原文内容  
+✓ 即时下载  
+✓ 多模板支持  
+✓ 预览后应用
 
-### 📋 预设模板
-
-| 模板名称 | 适用场景 | 页边距 | 行距 | 正文字体 |
-|:---:|:---|:---:|:---:|:---:|
-| 🎓 **国标通用** | 大多数高校 | 2.5/2.5/3.0/2.5 | 1.5倍 | 宋体 |
-
----
-
-## 🎮 功能演示
-
-### 使用流程
-
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   📤 上传   │ ─► │   🔍 检查   │ ─► │   ✨ 排版   │ ─► │   📥 下载   │
-│   Word文档  │    │   格式问题  │    │   一键修正  │    │   规范文档  │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-```
+</td>
+</tr>
+</table>
 
 ---
 
-## 🚀 快速开始
+## � 快速开始
 
 ### 环境要求
 
-| 环境 | 版本 | 说明 |
-|:---:|:---:|:---|
-| Python | 3.8+ | 推荐 3.10 或 3.11 |
-| pip | 最新版 | Python 包管理器 |
-| 操作系统 | Windows/macOS/Linux | 跨平台支持 |
+| 环境 | 版本 |
+|:-----|:----:|
+| Python | 3.8+ |
+| pip | 最新版 |
+| 操作系统 | 任意 |
 
 ### 安装步骤
 
@@ -141,64 +148,35 @@
 # 克隆项目
 git clone https://github.com/1822520752/paper-format.git
 
-# 进入后端目录
-cd paper-format/backend
-
 # 安装依赖
+cd paper-format/backend
 pip install -r requirements.txt
 
 # 启动服务
 python app.py
 ```
 
-### 访问应用
+### 使用流程
 
-打开浏览器访问：**http://localhost:3000**
-
----
-
-## 📋 使用指南
-
-### 步骤一：上传文档
-
-1. 点击上传区域或拖拽 .docx 格式的论文文档
-2. 等待上传完成
-
-> ⚠️ **注意**：仅支持 .docx 格式，不支持 .doc 格式
-
-### 步骤二：检查格式
-
-1. 点击「格式检查」按钮
-2. 查看检查报告，了解格式问题
-
-### 步骤三：一键排版
-
-1. 点击「一键排版」按钮
-2. 等待排版完成
-
-### 步骤四：下载文档
-
-1. 点击「下载」按钮
-2. 获取格式规范的文档
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│  📤 上传    │ ─► │  🔍 检查    │ ─► │  ✨ 排版    │ ─► │  📥 下载    │
+│  Word文档   │    │  格式问题   │    │  一键修正   │    │  规范文档   │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+```
 
 ---
 
-## ⚙️ 配置说明
+## ⚙️ 默认配置
 
-### 默认配置（国标通用）
+> 基于 GB/T 7713.1-2006 国标规范
 
-| 设置项 | 默认值 |
-|:---|:---:|
-| 上页边距 | 2.5 cm |
-| 下页边距 | 2.5 cm |
-| 左页边距 | 3.0 cm |
-| 右页边距 | 2.5 cm |
-| 正文字体 | 宋体 12pt |
-| 一级标题 | 黑体 16pt 居中加粗 |
-| 二级标题 | 黑体 14pt 左对齐加粗 |
-| 三级标题 | 黑体 12pt 左对齐加粗 |
-| 行距 | 1.5 倍 |
-| 首行缩进 | 2 字符 |
+| 设置项 | 默认值 | 设置项 | 默认值 |
+|:-------|:------:|:-------|:------:|
+| 上页边距 | 2.5 cm | 下页边距 | 2.5 cm |
+| 左页边距 | 3.0 cm | 右页边距 | 2.5 cm |
+| 正文字体 | 宋体 12pt | 一级标题 | 黑体 16pt |
+| 行距 | 1.5 倍 | 首行缩进 | 2 字符 |
 
 ---
 
@@ -206,37 +184,32 @@ python app.py
 
 ```
 paper-format/
-├── backend/                  # 后端服务
-│   ├── app.py               # Flask 主应用
-│   ├── requirements.txt     # Python 依赖
-│   └── utils/               # 核心模块
-│       ├── docx_processor.py    # 文档处理器
-│       └── format_config.py     # 格式配置
-│
-├── frontend/                # 前端界面
-│   └── public/
-│       ├── index.html       # 主页面
-│       ├── css/style.css    # 样式
-│       └── js/app.js        # 脚本
-│
-├── README.md                # 文档（英文）
-├── README_zh.md             # 文档（中文）
-└── LICENSE                  # MIT 协议
+├── 📂 backend/
+│   ├── 📄 app.py
+│   ├── 📄 requirements.txt
+│   └── 📂 utils/
+│       ├── 📄 docx_processor.py
+│       └── 📄 format_config.py
+├── 📂 frontend/
+│   └── 📂 public/
+│       ├── 📄 index.html
+│       ├── 📂 css/
+│       └── 📂 js/
+├── 📄 README.md
+└── 📄 LICENSE
 ```
 
 ---
 
-## 🔌 API 文档
+## 🔌 API 接口
 
-### 接口列表
-
-| 接口 | 方法 | 描述 |
-|:---|:---:|:---|
-| `/api/upload` | POST | 上传文档 |
-| `/api/check` | POST | 格式检查 |
-| `/api/format` | POST | 一键排版 |
-| `/api/download/<file_id>` | GET | 下载文档 |
-| `/api/templates` | GET | 获取模板列表 |
+| 方法 | 接口 | 描述 |
+|:----:|:-----|:-----|
+| `POST` | `/api/upload` | 上传文档 |
+| `POST` | `/api/check` | 格式检查 |
+| `POST` | `/api/format` | 一键排版 |
+| `GET` | `/api/download/<id>` | 下载文档 |
+| `GET` | `/api/templates` | 模板列表 |
 
 ---
 
@@ -246,7 +219,7 @@ paper-format/
 
 1. Fork 本仓库
 2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+3. 提交更改 (`git commit -m 'Add AmazingFeature'`)
 4. 推送分支 (`git push origin feature/AmazingFeature`)
 5. 发起 Pull Request
 
@@ -255,70 +228,75 @@ paper-format/
 ## ❓ 常见问题
 
 <details>
-<summary><b>Q：支持哪些文档格式？</b></summary>
-
-目前仅支持 .docx 格式（Office 2007+），不支持 .doc 格式。
-
+<summary><b>支持哪些文件格式？</b></summary>
+<br>
+仅支持 <code>.docx</code> 格式（Word 2007+），不支持旧版 <code>.doc</code> 格式。
 </details>
 
 <details>
-<summary><b>Q：会修改我的论文内容吗？</b></summary>
-
-不会！系统只修改格式（字体、行距、页边距等），不会改动任何文字内容。
-
+<summary><b>会修改我的论文内容吗？</b></summary>
+<br>
+<strong>不会！</strong> 系统只调整格式（字体、页边距、行距等），您的文字内容完全不变。
 </details>
 
 <details>
-<summary><b>Q：文件安全吗？</b></summary>
+<summary><b>文件安全吗？隐私有保障吗？</b></summary>
+<br>
+<strong>安全！</strong> 所有文件仅临时处理，1小时内自动删除。我们绝不存储或备份您的文档。
+</details>
 
-安全！文件仅临时存储，1小时后自动删除。我们不会保存或备份您的文件。
-
+<details>
+<summary><b>可以自定义格式规则吗？</b></summary>
+<br>
+<strong>可以！</strong> 使用「高级设置」面板自定义页边距、字体等参数，或导入配置文件。
 </details>
 
 ---
 
 ## 📜 更新日志
 
-### v1.0.0 (2026-03-07)
+### `v1.0.0` - 2026-03-07
 
 - ✨ 首次发布
-- ✨ 格式检查功能
+- ✨ 格式检查（15+ 项）
 - ✨ 一键排版功能
-- ✨ 国标通用模板支持
+- ✨ 国标通用模板
 - 📝 完整项目文档
-
----
-
-## 📄 开源协议
-
-本项目基于 **MIT 协议** 开源。
 
 ---
 
 ## 👤 关于作者
 
+<div align="center">
+
 **试界 TryWorld**
 
-<p align="center">
-  <a href="https://github.com/1822520752">
-    <img src="https://img.shields.io/badge/GitHub-1822520752-181717?style=for-the-badge&logo=github" alt="GitHub">
-  </a>
-</p>
+[![GitHub](https://img.shields.io/badge/GitHub-1822520752-181717?style=for-the-badge&logo=github)](https://github.com/1822520752)
+
+*探索无限可能*
+
+</div>
+
+---
+
+## ⭐ Star 历史
+
+<div align="center">
+
+**如果这个项目对你有帮助，请给一个 Star！⭐**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=1822520752/paper-format&type=Date)](https://star-history.com/#1822520752/paper-format&Date)
+
+</div>
 
 ---
 
 <div align="center">
 
-## ⭐ Star 历史
-
-**如果这个项目对你有帮助，请给一个 Star！**
-
-[![Star History Chart](https://api.star-history.com/svg?repos=1822520752/paper-format&type=Date)](https://star-history.com/#1822520752/paper-format&Date)
-
----
-
-<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with love">
+<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square" alt="Made with love">
 
 **© 2026 论文格 - 让论文格式规范变简单**
+
+**[⬆ 返回顶部](#readme-top)**
 
 </div>

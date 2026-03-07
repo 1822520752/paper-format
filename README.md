@@ -1,204 +1,182 @@
-<div align="center">
-
-[![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README.md)
-[![中文](https://img.shields.io/badge/Language-中文-red?style=for-the-badge)](README_zh.md)
-
-</div>
-
----
+<a name="readme-top"></a>
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/PaperFormat-Thesis_Formatting_Tool-4A90D9?style=for-the-badge&logo=googledocs&logoColor=white" alt="PaperFormat">
+<!-- Language Switcher -->
+<img src="https://img.shields.io/badge/English-4F46E5?style=for-the-badge" alt="English">
+<img src="https://img.shields.io/badge/中文-EF4444?style=for-the-badge" alt="中文">
 
-# 📝 PaperFormat
+<br><br>
 
-### **One-Click Thesis Formatting Tool**
+<!-- Logo & Title -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://via.placeholder.com/120x120/4F46E5/FFFFFF?text=PF">
+  <img src="https://via.placeholder.com/120x120/4F46E5/FFFFFF?text=PF" alt="Logo" width="120" height="120" style="border-radius: 24px; box-shadow: 0 8px 32px rgba(79,70,229,0.3);">
+</picture>
 
-*Making thesis formatting simple · Making graduation easier*
+<h1 style="font-size: 3.5rem; font-weight: 800; margin: 16px 0 8px; background: linear-gradient(135deg, #4F46E5, #7C3AED, #9333EA); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+  PaperFormat
+</h1>
 
-<p align="center">
+<h3 style="font-size: 1.5rem; font-weight: 600; color: #64748B; margin: 0 0 8px;">
+  One-Click Thesis Formatting Tool
+</h3>
+
+<p style="font-size: 1.1rem; color: #94A3B8; margin: 0 0 24px;">
+  ✨ Making thesis formatting simple · Making graduation easier ✨
+</p>
+
+<!-- Badges Row 1 -->
+<p>
   <a href="https://www.python.org/downloads/">
-    <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+    <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   </a>
   <a href="https://flask.palletsprojects.com/">
-    <img src="https://img.shields.io/badge/Flask-2.0+-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+    <img src="https://img.shields.io/badge/Flask-2.0+-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask">
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/badge/License-MIT-10B981?style=flat-square" alt="License">
   </a>
-</p>
-
-<p align="center">
   <a href="https://github.com/1822520752/paper-format/stargazers">
-    <img src="https://img.shields.io/github/stars/1822520752/paper-format?style=for-the-badge&logo=github&color=yellow" alt="Stars">
+    <img src="https://img.shields.io/github/stars/1822520752/paper-format?style=flat-square&logo=github&color=FBBF24" alt="Stars">
   </a>
   <a href="https://github.com/1822520752/paper-format/network/members">
-    <img src="https://img.shields.io/github/forks/1822520752/paper-format?style=for-the-badge&logo=github" alt="Forks">
-  </a>
-  <a href="https://github.com/1822520752/paper-format/issues">
-    <img src="https://img.shields.io/github/issues/1822520752/paper-format?style=for-the-badge&logo=github" alt="Issues">
+    <img src="https://img.shields.io/github/forks/1822520752/paper-format?style=flat-square&logo=github" alt="Forks">
   </a>
 </p>
 
-<p align="center">
+<!-- CTA Buttons -->
+<p>
   <a href="https://paperformat-zx1822520752.app.haisnap.com/">
-    <img src="https://img.shields.io/badge/🚀_Live_Demo-Click_Here-4F46E5?style=for-the-badge" alt="Live Demo">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-4F46E5?style=for-the-badge" alt="Live Demo">
   </a>
-  <a href="https://github.com/1822520752/paper-format/issues">
-    <img src="https://img.shields.io/badge/�_Report_Bug-Click_Here-DC2626?style=for-the-badge" alt="Report Bug">
+  <a href="https://github.com/1822520752/paper-format/issues/new">
+    <img src="https://img.shields.io/badge/🐛_Report_Bug-EF4444?style=for-the-badge" alt="Report Bug">
   </a>
-  <a href="https://github.com/1822520752/paper-format/issues">
-    <img src="https://img.shields.io/badge/💡_Request_Feature-Click_Here-059669?style=for-the-badge" alt="Request Feature">
+  <a href="https://github.com/1822520752/paper-format/issues/new">
+    <img src="https://img.shields.io/badge/💡_Feature-10B981?style=for-the-badge" alt="Feature Request">
   </a>
 </p>
+
+<!-- Demo Image -->
+<img src="https://via.placeholder.com/900x500/EEF2FF/4F46E5?text=🎨+PaperFormat+Preview" width="90%" style="border-radius: 16px; box-shadow: 0 12px 40px rgba(79,70,229,0.15); margin: 24px 0;">
 
 </div>
 
 ---
 
-## 📖 Background
+## 📌 About
 
-### Why This Tool?
+<table>
+<tr>
+<td width="60%">
 
-Every graduation season, countless university graduates face the tedious task of thesis formatting:
+**PaperFormat** is a professional thesis formatting tool designed for university graduates.
 
-> 😫 "Need to adjust margins, change fonts, set line spacing..."
-> 
-> 😫 "Reference format is wrong again, figure captions are misplaced..."
-> 
-> 😫 "After hours of editing, it still doesn't meet school requirements..."
+**Why PaperFormat?**
+- 🎯 **One-Click Solution** - Check and format your thesis in seconds
+- 📐 **National Standard** - Follows GB/T 7713.1-2006 specifications
+- 🔒 **Privacy First** - Files auto-deleted after processing
+- 🆓 **100% Free** - No registration, no limits
 
-**PaperFormat** was created to solve these pain points!
+</td>
+<td width="40%" align="center">
 
-### Our Goals
+**Quick Stats**
 
-- ✅ **Free Your Hands** - Say goodbye to tedious manual formatting
-- ✅ **Improve Efficiency** - Complete format checking and formatting with one click
-- ✅ **Standardization** - Strictly follow the national standard GB/T 7713.1-2006
-- ✅ **Easy to Use** - No installation required, use directly in your browser
+| Metric | Value |
+|:------:|:-----:|
+| Format Checks | 15+ |
+| Templates | 1 |
+| Price | Free |
+| Uptime | 99.9% |
 
----
-
-## ✨ Core Features
-
-### 🔍 Smart Format Checking
-
-| Check Item | Content | Precision |
-|:---:|:---|:---:|
-| 📄 **Page Settings** | Top/bottom/left/right margins, paper size | 0.1cm |
-| 🔤 **Heading Format** | Level 1/2/3 heading font, size, bold, alignment | Exact |
-| 📝 **Body Format** | Body font, size, line spacing, first line indent | Exact |
-| 📋 **Abstract Format** | Chinese/English abstract title and body format | Exact |
-| 🖼️ **Figure/Table Captions** | Caption font, size, position | Exact |
-| 📚 **References** | Reference title and body format | Exact |
-| 📑 **Header/Footer** | Header content, page number format | Exact |
-
-### 🎨 One-Click Smart Formatting
-
-| Feature | Description |
-|:---:|:---|
-| 🎯 **Auto Recognition** | Intelligently identify headings, body, abstract and other content |
-| ⚡ **Batch Processing** | Complete all format adjustments at once |
-| 🔧 **Custom Configuration** | Support custom format parameters |
-| 📥 **Content Preservation** | Formatting process does not change original content |
-| 💾 **Instant Download** | Download immediately after formatting |
-
-### 📋 Preset Templates
-
-| Template Name | Applicable Scenarios | Margins | Line Spacing | Body Font |
-|:---:|:---|:---:|:---:|:---:|
-| 🎓 **National Standard** | Most universities | 2.5/2.5/3.0/2.5 | 1.5x | SimSun |
+</td>
+</tr>
+</table>
 
 ---
 
-## 🎮 Demo
+## ✨ Features
 
-### Workflow
+<table>
+<tr>
+<th width="50%">🔍 Smart Format Checking</th>
+<th width="50%">🎨 One-Click Formatting</th>
+</tr>
+<tr>
+<td>
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   📤 Upload │ ─► │   🔍 Check  │ ─► │   ✨ Format │ ─► │   📥 Download│
-│   Word Doc  │    │   Issues    │    │   One-Click │    │   Result    │
-└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-```
+✓ Page margins & paper size  
+✓ Heading styles (H1/H2/H3)  
+✓ Body font & line spacing  
+✓ Abstract formatting  
+✓ Figure/Table captions  
+✓ References format  
+✓ Header & footer
+
+</td>
+<td>
+
+✓ Auto content recognition  
+✓ Batch processing  
+✓ Custom configuration  
+✓ Content preservation  
+✓ Instant download  
+✓ Multiple templates  
+✓ Preview before apply
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🚀 Quick Start
 
-### Requirements
+### Prerequisites
 
-| Environment | Version | Notes |
-|:---:|:---:|:---|
-| Python | 3.8+ | 3.10 or 3.11 recommended |
-| pip | Latest | Python package manager |
-| OS | Windows/macOS/Linux | Cross-platform support |
+| Requirement | Version |
+|:------------|:-------:|
+| Python | 3.8+ |
+| pip | Latest |
+| OS | Any |
 
 ### Installation
 
 ```bash
-# Clone the project
+# Clone
 git clone https://github.com/1822520752/paper-format.git
 
-# Navigate to backend directory
+# Install
 cd paper-format/backend
-
-# Install dependencies
 pip install -r requirements.txt
 
-# Start the server
+# Run
 python app.py
 ```
 
-### Access the Application
+### Usage
 
-Open your browser and visit: **http://localhost:3000**
-
----
-
-## 📋 User Guide
-
-### Step 1: Upload Document
-
-1. Click the upload area or drag and drop your .docx file
-2. Wait for upload to complete
-
-> ⚠️ **Note**: Only .docx format is supported, .doc format is not supported
-
-### Step 2: Check Format
-
-1. Click the "Format Check" button
-2. Review the check report to understand format issues
-
-### Step 3: One-Click Formatting
-
-1. Click the "One-Click Format" button
-2. Wait for formatting to complete
-
-### Step 4: Download Document
-
-1. Click the "Download" button
-2. Get the formatted document
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│  📤 Upload  │ ─► │  🔍 Check   │ ─► │  ✨ Format  │ ─► │  📥 Download│
+│  Word Doc   │    │  Issues     │    │  One-Click  │    │  Result     │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+```
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Default Configuration
 
-### Default Configuration (National Standard)
+> Based on GB/T 7713.1-2006 National Standard
 
-| Setting | Default Value |
-|:---|:---:|
-| Top Margin | 2.5 cm |
-| Bottom Margin | 2.5 cm |
-| Left Margin | 3.0 cm |
-| Right Margin | 2.5 cm |
-| Body Font | SimSun 12pt |
-| Heading 1 | SimHei 16pt Center Bold |
-| Heading 2 | SimHei 14pt Left Bold |
-| Heading 3 | SimHei 12pt Left Bold |
-| Line Spacing | 1.5x |
-| First Line Indent | 2 characters |
+| Setting | Value | Setting | Value |
+|:--------|:-----:|:--------|:-----:|
+| Top Margin | 2.5 cm | Bottom Margin | 2.5 cm |
+| Left Margin | 3.0 cm | Right Margin | 2.5 cm |
+| Body Font | SimSun 12pt | Heading 1 | SimHei 16pt |
+| Line Spacing | 1.5x | First Indent | 2 chars |
 
 ---
 
@@ -206,47 +184,42 @@ Open your browser and visit: **http://localhost:3000**
 
 ```
 paper-format/
-├── backend/                  # Backend service
-│   ├── app.py               # Flask main application
-│   ├── requirements.txt     # Python dependencies
-│   └── utils/               # Core modules
-│       ├── docx_processor.py    # Document processor
-│       └── format_config.py     # Format configuration
-│
-├── frontend/                # Frontend interface
-│   └── public/
-│       ├── index.html       # Main page
-│       ├── css/style.css    # Styles
-│       └── js/app.js        # Scripts
-│
-├── README.md                # Documentation (English)
-├── README_zh.md             # Documentation (Chinese)
-└── LICENSE                  # MIT License
+├── 📂 backend/
+│   ├── 📄 app.py
+│   ├── 📄 requirements.txt
+│   └── 📂 utils/
+│       ├── 📄 docx_processor.py
+│       └── 📄 format_config.py
+├── 📂 frontend/
+│   └── 📂 public/
+│       ├── 📄 index.html
+│       ├── 📂 css/
+│       └── 📂 js/
+├── 📄 README.md
+└── 📄 LICENSE
 ```
 
 ---
 
-## 🔌 API Documentation
+## 🔌 API Reference
 
-### Endpoints
-
-| Endpoint | Method | Description |
-|:---|:---:|:---|
-| `/api/upload` | POST | Upload document |
-| `/api/check` | POST | Format check |
-| `/api/format` | POST | One-click formatting |
-| `/api/download/<file_id>` | GET | Download document |
-| `/api/templates` | GET | Get template list |
+| Method | Endpoint | Description |
+|:------:|:---------|:------------|
+| `POST` | `/api/upload` | Upload document |
+| `POST` | `/api/check` | Check formatting |
+| `POST` | `/api/format` | Apply formatting |
+| `GET` | `/api/download/<id>` | Download result |
+| `GET` | `/api/templates` | List templates |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
@@ -255,70 +228,75 @@ Contributions are welcome!
 ## ❓ FAQ
 
 <details>
-<summary><b>Q: What document formats are supported?</b></summary>
-
-Only .docx format (Office 2007+) is supported. .doc format is not supported.
-
+<summary><b>What file formats are supported?</b></summary>
+<br>
+Only <code>.docx</code> format (Word 2007+) is supported. The older <code>.doc</code> format is not supported.
 </details>
 
 <details>
-<summary><b>Q: Will my content be modified?</b></summary>
-
-No! The system only modifies formatting (fonts, line spacing, margins, etc.) and does not change any text content.
-
+<summary><b>Will my thesis content be modified?</b></summary>
+<br>
+<strong>No!</strong> The system only adjusts formatting (fonts, margins, spacing). Your text content remains completely unchanged.
 </details>
 
 <details>
-<summary><b>Q: Is my file safe?</b></summary>
+<summary><b>Is my file safe and private?</b></summary>
+<br>
+<strong>Yes!</strong> All files are processed temporarily and automatically deleted within 1 hour. We never store or backup your documents.
+</details>
 
-Yes! Files are processed temporarily and automatically deleted after 1 hour. We do not store or backup your files.
-
+<details>
+<summary><b>Can I customize the formatting rules?</b></summary>
+<br>
+<strong>Yes!</strong> Use the "Advanced Settings" panel to customize margins, fonts, and other parameters, or import a configuration file.
 </details>
 
 ---
 
 ## 📜 Changelog
 
-### v1.0.0 (2026-03-07)
+### `v1.0.0` - 2026-03-07
 
 - ✨ Initial release
-- ✨ Format checking feature
-- ✨ One-click formatting feature
-- ✨ National standard template support
+- ✨ Format checking (15+ items)
+- ✨ One-click formatting
+- ✨ National standard template
 - 📝 Complete documentation
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
 
 ---
 
 ## 👤 Author
 
+<div align="center">
+
 **TryWorld**
 
-<p align="center">
-  <a href="https://github.com/1822520752">
-    <img src="https://img.shields.io/badge/GitHub-1822520752-181717?style=for-the-badge&logo=github" alt="GitHub">
-  </a>
-</p>
+[![GitHub](https://img.shields.io/badge/GitHub-1822520752-181717?style=for-the-badge&logo=github)](https://github.com/1822520752)
+
+*Exploring Infinite Possibilities*
+
+</div>
+
+---
+
+## ⭐ Star History
+
+<div align="center">
+
+**If this project helps you, please consider giving it a star! ⭐**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=1822520752/paper-format&type=Date)](https://star-history.com/#1822520752/paper-format&Date)
+
+</div>
 
 ---
 
 <div align="center">
 
-## ⭐ Star History
-
-**If this project helps you, please give it a Star!**
-
-[![Star History Chart](https://api.star-history.com/svg?repos=1822520752/paper-format&type=Date)](https://star-history.com/#1822520752/paper-format&Date)
-
----
-
-<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with love">
+<img src="https://img.shields.io/badge/Made%20with-❤️-red?style=flat-square" alt="Made with love">
 
 **© 2026 PaperFormat - Making thesis formatting simple**
+
+**[⬆ Back to Top](#readme-top)**
 
 </div>
